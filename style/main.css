@@ -12,6 +12,7 @@
   --first-color: #b08e6a;
   --second-color: #999999;
   --third-color: #f2ecec;
+  --third-color-hover: #b08e6a;
 
   --btn-color: #b08e6a;
   --btn-hover-color: #b08e6abb;
@@ -63,6 +64,10 @@ body {
 .nav__list a {
   color: var(--third-color);
   text-transform: uppercase;
+}
+
+.nav__list a:hover {
+  color: var(--third-color-hover);
 }
 
 .nav__btn {
