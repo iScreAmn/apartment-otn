@@ -240,12 +240,15 @@ body {
   color: var(--second-color);
   max-width: 450px;
   font-size: 23.2px;
+  font-weight: 200;
+  text-align: right;
   margin-top: 106px;
 }
 
 .home__img {
   position: relative; /* Для позиционирования псевдоэлемента и ссылки */
-  max-width: 1184px;
+  max-width: 1110px;
+  height: 500px;
   width: 100%;
   margin: 0 auto;
   border-radius: 30px;
