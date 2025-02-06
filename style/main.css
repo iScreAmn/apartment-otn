@@ -235,7 +235,8 @@ body {
 }
 
 .home__video-btn:hover {
-  /* background-color: var(--btn-hover-color); */
+  background-color: #bebebe;
+  color: var(--first-color);
 }
 
 .home__video-btn:active {
