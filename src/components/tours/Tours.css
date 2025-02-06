@@ -1,0 +1,171 @@
+/* * * * TOURS * * * */
+
+.tours {
+  padding-bottom: 50px;
+}
+
+.services-title {
+}
+.toggle__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.tour-tab {
+  padding: 20px 30px;
+  background-color: #1a2c27;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  color: var(--third-color);
+  text-transform: uppercase;
+}
+
+.active {
+  background-color: #000000;
+}
+
+.tour__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+}
+.tour {
+  position: relative;
+  background-image: url("https://composit-pools.ru/assets/images/blog%202/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%B0%20%D0%B8%20%D0%B2%D1%80%D0%B5%D0%B4%20%D1%81%D0%B5%D1%80%D0%BD%D1%8B%D1%85%20%D0%B1%D0%B0%D0%BD%D1%8C.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  padding: 20px;
+  transition: .3s linear;
+  overflow: hidden;
+}
+
+.tour:hover {
+  transform: scale(1.03);
+}
+
+.tour:nth-child(2) {
+  position: relative;
+  background-image: url("https://madloba.info/media/images/tbilisi-winter.2e16d0ba.fill-1200x675.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  padding: 20px;
+  transition: .3s linear;
+  overflow: hidden;
+}
+
+.tour:nth-child(3) {
+  position: relative;
+  background-image: url("https://design-mate.ru/upload/images/post/post_4707.jpg?1577270628");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  padding: 20px;
+  transition: .3s linear;
+  overflow: hidden;
+}
+
+.tour:nth-child(4) {
+  position: relative;
+  background-image: url("https://radiocafe.ge/source/images/blog_images/winter_tbilisi_4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  padding: 20px;
+  transition: .3s linear;
+  overflow: hidden;
+}
+
+.tour:nth-child(5) {
+  position: relative;
+  background-image: url("https://35photo.pro/photos_main/319/1596920.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  padding: 20px;
+  transition: .3s linear;
+  overflow: hidden;
+}
+
+.tour:nth-child(6) {
+  position: relative;
+  background-image: url("https://travel-picture.ru/wp-content/uploads/2017/10/%D0%B7%D0%B8%D0%BC%D0%B0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  padding: 20px;
+  transition: .3s linear;
+  overflow: hidden;
+}
+
+.tour::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.tour__title {
+  color: var(--third-color);
+  font-size: 20px;
+  margin-top: 125px;
+}
+
+.tour__subtitle {
+  color: var(--third-color);
+  font-size: 10px;
+}
