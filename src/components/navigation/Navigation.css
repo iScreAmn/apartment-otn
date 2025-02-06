@@ -1,0 +1,134 @@
+/* * * * HEADER * * * */
+
+.header {
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav__logo {}
+
+.nav__logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.nav__list ul {
+  display: flex;
+  color: var(--third-color);
+  gap: 80px;
+}
+
+.nav__list a {
+  color: var(--third-color);
+  text-transform: uppercase;
+}
+
+.nav__list a:hover {
+  color: var(--third-color-hover);
+}
+
+.nav__btn {
+  color: #fff;
+  background-color: var(--btn-color);
+  padding: 15px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.nav__btn:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.nav__btn:active {
+  position: relative;
+  top: 1px;
+}
+
+/* * * BURGER MENU * * */
+
+.nav__toggle {
+  display: none;
+}
+
+.menu-icon-wrapper {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 4px;
+  --color: #f2ecec;
+
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  display: block;
+
+  position: absolute;
+  left: 0;
+
+  width: var(--width);
+  height: var(--line-height);
+
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.menu-icon::before {
+  top: calc(var(--line-height) * -2);
+}
+
+.menu-icon::after {
+  top: calc(var(--line-height) * 2);
+}
+
+.menu-icon.menu-icon--active {
+  background-color: transparent;
+}
+
+.menu-icon.menu-icon--active::before,
+.menu-icon.menu-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.menu-icon.menu-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.menu-icon.menu-icon--active::after {
+  transform: rotate(-45deg);
+}
+
+
+@media (max-width: 1000px) {
+  .nav__list,
+  .nav__btn {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+}
