@@ -20,6 +20,10 @@
   --orange: #ff7c4e;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", serif;
   background-color: var(--background);
