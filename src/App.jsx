@@ -1,4 +1,4 @@
-import { Navigation, Home, Services, Tours } from "./components/index";
+import { Navigation, Home, Services, Tours, Order } from "./components/index";
 
 function App() {
   return (
@@ -6,6 +6,7 @@ function App() {
       <Navigation />
       <Home />
       <main>
+        <Order />
         <Services />
         <Tours />
       </main>
