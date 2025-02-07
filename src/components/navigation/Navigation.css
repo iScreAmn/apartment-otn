@@ -24,6 +24,7 @@
   gap: 80px;
 }
 
+
 .nav__list a {
   color: var(--third-color);
   text-transform: uppercase;
@@ -48,10 +49,10 @@
   background-color: var(--btn-hover-color);
 }
 
-.nav__btn:active {
+/* .nav__btn:active {
   position: relative;
   top: 1px;
-}
+} */
 
 /* * * BURGER MENU * * */
 
