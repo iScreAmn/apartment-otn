@@ -42,7 +42,7 @@
   transform: scale(1.03);
 }
 
-.card i {
+.card svg {
   color: var(--first-color);
   font-size: 25px;
 }
