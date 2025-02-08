@@ -22,40 +22,53 @@ const Order = () => {
       <h2 className="services-title">
         Забронируй <span>Онлайн</span>
       </h2>
-      <motion.div
-        className="booking-form"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }}
-        variants={slideInVariants("left", 0.9, 100, false)}
-      >
+      <div className="booking-form">
         <div className="form-group">
           <label htmlFor="check-in">Заезд:</label>
-          <div className="input-with-icon">
+          <motion.div
+            className="input-with-icon"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            custom={1}
+            variants={slideInVariants("top", 0.7, 50, true)}
+          >
             <input
               type="date"
               id="check-in"
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
-              placeholder="Выберите дату заезда"
             />
             <FaCalendarAlt className="calendar-icon" />
-          </div>
+          </motion.div>
         </div>
         <div className="form-group">
           <label htmlFor="check-out">Выезд:</label>
-          <div className="input-with-icon">
+          <motion.div
+            className="input-with-icon"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            custom={2}
+            variants={slideInVariants("top", 0.7, 50, true)}
+          >
             <input
               type="date"
               id="check-out"
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
-              placeholder="Выберите дату выезда"
             />
             <FaCalendarAlt className="calendar-icon" />
-          </div>
+          </motion.div>
         </div>
-        <div className="form-group">
+        <motion.div
+          className="form-group"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+          custom={3}
+          variants={slideInVariants("top", 0.7, 50, true)}
+        >
           <label htmlFor="guests">Гости:</label>
           <input
             type="number"
@@ -63,15 +76,21 @@ const Order = () => {
             min="1"
             value={guests}
             onChange={(e) => setGuests(Number(e.target.value))}
-            placeholder="Количество гостей"
           />
-        </div>
-        <div className="order__wrapper">
+        </motion.div>
+        <motion.div 
+        className="order__wrapper"
+        initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+          custom={4}
+          variants={slideInVariants("top", 0.7, 50, true)}
+        >
           <button className="order__btn" onClick={handleCheckAvailability}>
             Показать наличие
           </button>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 };
