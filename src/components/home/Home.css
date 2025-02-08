@@ -76,6 +76,15 @@
   padding: 15px 32px;
   border-radius: 15px;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.home__video-btn svg {
+  width: 20px;
 }
 
 .home__video-btn:hover {

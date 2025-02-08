@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Home.css";
+import { FaVideo } from "react-icons/fa";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,6 +39,7 @@ const Home = () => {
               onClick={() => setIsModalOpen(true)}
             >
               Смотреть дом
+              <FaVideo/>
             </button>
           </div>
         </div>
