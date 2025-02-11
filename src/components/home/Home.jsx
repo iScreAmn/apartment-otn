@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Home.css";
 import { FaVideo } from "react-icons/fa";
+import { RemoveScroll } from "react-remove-scroll";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -58,19 +59,21 @@ const Home = () => {
 
       {/* Модальное окно с видео */}
       {isModalOpen && (
-        <div className="home-modal-overlay" onClick={() => setIsModalOpen(false)}>
-          <div className="home-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="home-modal-close" onClick={() => setIsModalOpen(false)}>×</button>
-            <iframe
-              
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-              title="YouTube video"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            ></iframe>
+        <RemoveScroll>
+          <div className="home-modal-overlay" onClick={() => setIsModalOpen(false)}>
+            <div className="home-modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="home-modal-close" onClick={() => setIsModalOpen(false)}>×</button>
+              <iframe
+                
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                title="YouTube video"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
-        </div>
+        </RemoveScroll>
       )}
     </>
   );

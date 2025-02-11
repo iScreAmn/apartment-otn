@@ -5,6 +5,7 @@ import { FaSquareParking } from "react-icons/fa6";
 import { FaMountainSun } from "react-icons/fa6";
 import { modalContent } from "../../data/services";
 import "./Services.css";
+import { RemoveScroll } from "react-remove-scroll";
 
 const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -85,26 +86,28 @@ const Services = () => {
 
       {/* Модальное окно */}
       {isModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="modal-close"
-              onClick={() => setIsModalOpen(false)}
-            >
-              ×
-            </button>
-            <h2>{modalContent[selectedModal]?.title}</h2>
-            <p>{modalContent[selectedModal]?.text}</p>
-            <div className="modal-icons">
-              {selectedModal === "transfer" && (
-                <FaPlane className="modal-icon" />
-              )}
-              {selectedModal === "location" && (
-                <IoLocationOutline className="modal-icon" />
-              )}
+        <RemoveScroll>
+          <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="modal-close"
+                onClick={() => setIsModalOpen(false)}
+              >
+                ×
+              </button>
+              <h2>{modalContent[selectedModal]?.title}</h2>
+              <p>{modalContent[selectedModal]?.text}</p>
+              <div className="modal-icons">
+                {selectedModal === "transfer" && (
+                  <FaPlane className="modal-icon" />
+                )}
+                {selectedModal === "location" && (
+                  <IoLocationOutline className="modal-icon" />
+                )}
+              </div>
             </div>
           </div>
-        </div>
+        </RemoveScroll>
       )}
     </section>
   );
