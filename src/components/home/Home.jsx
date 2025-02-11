@@ -58,9 +58,9 @@ const Home = () => {
 
       {/* Модальное окно с видео */}
       {isModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setIsModalOpen(false)}>✖</button>
+        <div className="home-modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="home-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="home-modal-close" onClick={() => setIsModalOpen(false)}>×</button>
             <iframe
               
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
