@@ -1,0 +1,31 @@
+.footer {
+  background-color: black;
+  padding: 20px 0 30px;
+
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__copyright {
+  color: #fff;
+}
+
+.footer-span {
+  color: var(--first-color);
+}
+
+.footer__year {
+  margin-top: 5px;
+  color: var(--first-color);
+}
+
+@media (max-width: 353px) {
+  .footer__copyright {
+    font-size: 13px;
+  }
+}
