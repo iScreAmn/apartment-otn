@@ -18,10 +18,10 @@ const navigation = () => {
                 <a href="#!">Главная</a>
               </li>
               <li>
-                <a href="#!">Услуги</a>
+                <a href="#services">Услуги</a>
               </li>
               <li>
-                <a href="#!">Галерея</a>
+                <a href="#tours">Туры</a>
               </li>
               <li>
                 <a href="#!">Контакты</a>
