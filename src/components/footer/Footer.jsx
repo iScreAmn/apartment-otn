@@ -2,6 +2,7 @@ import { logo } from "../../assets/images";
 import "./Footer.css";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   return (
     <footer className="footer">
       <div className="container">
@@ -12,7 +13,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="footer__copyright">OLD TBILISI <span className="footer-span">NARIKALA</span>, All rights reserved.</p>
-          <p className="footer__year">© 2025</p>
+          <p className="footer__year">© {currentYear}</p>
           
         </div>
       </div>
