@@ -28,10 +28,13 @@
 .nav__list a {
   color: var(--third-color);
   text-transform: uppercase;
+  transition: .2s ease-in-out;
+  font-size: 15px;
 }
 
 .nav__list a:hover {
   color: var(--third-color-hover);
+  
 }
 
 .nav__btn {
@@ -43,10 +46,12 @@
   text-transform: uppercase;
   font-weight: 300;
   font-size: 13px;
+  transition: .2s ease-in-out;
 }
 
 .nav__btn:hover {
   background-color: var(--btn-hover-color);
+  
 }
 
 /* .nav__btn:active {
