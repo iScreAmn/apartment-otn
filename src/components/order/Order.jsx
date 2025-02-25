@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./Order.css";
+import { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { motion } from "motion/react";
 import { slideInVariants } from "../../../utils/animation";
@@ -18,7 +18,7 @@ const Order = () => {
   };
 
   return (
-    <section className="booking-section" id="booking">
+    <section className="booking-section none" id="booking">
       <h2 className="services-title">
         Забронируй <span>Онлайн</span>
       </h2>
@@ -79,8 +79,8 @@ const Order = () => {
           />
         </motion.div>
         <motion.div 
-        className="order__wrapper"
-        initial="hidden"
+          className="order__wrapper"
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
           custom={4}
