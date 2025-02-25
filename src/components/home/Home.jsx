@@ -11,7 +11,19 @@ const Home = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  
+  useEffect(() => {
+    const lastShownTime = localStorage.getItem("lastShownTime");
+    const currentTime = new Date().getTime();
+
+    if (!lastShownTime || currentTime - lastShownTime > 15000) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        localStorage.setItem("lastShownTime", currentTime.toString());
+      }, 15000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const videoId = "riZAVELEHpk"; // Замените на нужный YouTube ID
   const [checkIn, setCheckIn] = useState("");
@@ -192,7 +204,101 @@ const Home = () => {
         </RemoveScroll>
       )}
 
-      
+      {/* Всплывающее окно с бронью */}
+      {isOpen && (
+        <RemoveScroll>
+          <div className="home-modal-overlay" onClick={() => setIsOpen(false)}>
+            <div
+              className="home-modal-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="home-modal-close"
+                onClick={() => setIsOpen(false)}
+              >
+                ×
+              </button>
+              <section className="booking-section" id="booking">
+                <h2 className="services-title">
+                  Забронируй <span>Онлайн</span>
+                </h2>
+                <div className="booking-form">
+                  <div className="form-group">
+                    <label htmlFor="check-in">Заезд:</label>
+                    <motion.div
+                      className="input-with-icon"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false, amount: 0.5 }}
+                      custom={1}
+                      variants={slideInVariants("top", 0.7, 50, true)}
+                    >
+                      <input
+                        type="date"
+                        id="check-in"
+                        value={checkIn}
+                        onChange={(e) => setCheckIn(e.target.value)}
+                      />
+                      <FaCalendarAlt className="calendar-icon" />
+                    </motion.div>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="check-out">Выезд:</label>
+                    <motion.div
+                      className="input-with-icon"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false, amount: 0.5 }}
+                      custom={2}
+                      variants={slideInVariants("top", 0.7, 50, true)}
+                    >
+                      <input
+                        type="date"
+                        id="check-out"
+                        value={checkOut}
+                        onChange={(e) => setCheckOut(e.target.value)}
+                      />
+                      <FaCalendarAlt className="calendar-icon" />
+                    </motion.div>
+                  </div>
+                  <motion.div
+                    className="form-group"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.5 }}
+                    custom={3}
+                    variants={slideInVariants("top", 0.7, 50, true)}
+                  >
+                    <label htmlFor="guests">Гости:</label>
+                    <input
+                      type="number"
+                      id="guests"
+                      min="1"
+                      value={guests}
+                      onChange={(e) => setGuests(Number(e.target.value))}
+                    />
+                  </motion.div>
+                  <motion.div
+                    className="order__wrapper"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.5 }}
+                    custom={4}
+                    variants={slideInVariants("top", 0.7, 50, true)}
+                  >
+                    <button
+                      className="order__btn"
+                      onClick={handleCheckAvailability}
+                    >
+                      Показать наличие
+                    </button>
+                  </motion.div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </RemoveScroll>
+      )}
     </>
   );
 };
