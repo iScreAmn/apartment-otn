@@ -1,10 +1,9 @@
+import "./Services.css";
 import { useState } from "react";
 import { FaWifi, FaTv, FaPlane } from "react-icons/fa";
+import { FaMountainSun, FaSquareParking } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
-import { FaSquareParking } from "react-icons/fa6";
-import { FaMountainSun } from "react-icons/fa6";
 import { modalContent } from "../../data/services";
-import "./Services.css";
 import { RemoveScroll } from "react-remove-scroll";
 
 const Services = () => {
@@ -84,7 +83,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Модальное окно */}
+      
       {isModalOpen && (
         <RemoveScroll>
           <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
