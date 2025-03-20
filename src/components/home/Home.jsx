@@ -40,40 +40,43 @@ const Home = () => {
 
   return (
     <>
-      <div className="home__wrapper">
-        <div className="home__action">
-          <h3 className="minutes">8 минут от Площади Свободы</h3>
-          <h2 className="home__name">
-            Old Tbilisi <span>Narikala</span>
-          </h2>
-          <div className="home__btns">
-            <a
-              href="#!"
-              className="home__btn"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Забронировать
-            </a>
-            <button
-              className="home__video-btn"
-              onClick={() => setIsVideoOpen(true)}
-            >
-              Смотреть дом
-              <FaVideo />
-            </button>
+      <div className="container">
+        <div className="home__wrapper">
+          <div className="home__action">
+            <h3 className="minutes">8 минут от Площади Свободы</h3>
+            <h2 className="home__name">
+              Old Tbilisi <span>Narikala</span>
+            </h2>
+            <div className="home__btns">
+              <button
+                href="#!"
+                className="home__btn"
+                onClick={() => setIsModalOpen(true)}
+              >
+                Забронировать
+              </button>
+              <button
+                className="home__video-btn"
+                onClick={() => setIsVideoOpen(true)}
+              >
+                Смотреть дом
+                <FaVideo />
+              </button>
+            </div>
           </div>
+          <div className="home__description">
+            <p>
+              Аренда уютных апартаментов в самом сердце старого Тбилиси, прямо
+              под крепостью Нарикала. Тебе у нас точно понравится
+            </p>
+          </div>
+          
         </div>
-        <div className="home__description">
-          <p>
-            Аренда уютных апартаментов в самом сердце старого Тбилиси, прямо под
-            крепостью Нарикала. Тебе у нас точно понравится
-          </p>
-        </div>
-      </div>
-      <div className="home__img">
-        <a href="#!" className="home__link">
-          Лучшие апартаменты <span>в историческом районе города</span>
-        </a>
+        <div className="home__img">
+            <a href="#!" className="home__link">
+              Лучшие апартаменты <span>в историческом районе города</span>
+            </a>
+          </div>
       </div>
 
       {/* Модальное окно с видео */}
