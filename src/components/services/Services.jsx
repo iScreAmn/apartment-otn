@@ -7,12 +7,20 @@ import { modalContent } from "../../data/services";
 import { RemoveScroll } from "react-remove-scroll";
 
 const Services = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedModal, setSelectedModal] = useState(null);
+  const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);
+  const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
 
-  const handleModalOpen = (modalType) => {
-    setSelectedModal(modalType);
-    setIsModalOpen(true);
+  const handleTransferModalOpen = () => {
+    setIsTransferModalOpen(true);
+  };
+
+  const handleLocationModalOpen = () => {
+    setIsLocationModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsTransferModalOpen(false);
+    setIsLocationModalOpen(false);
   };
 
   return (
@@ -47,7 +55,7 @@ const Services = () => {
             </p>
             <button
               className="card__btn"
-              onClick={() => handleModalOpen("transfer")}
+              onClick={handleTransferModalOpen}
             >
               подробнее
             </button>
@@ -61,7 +69,7 @@ const Services = () => {
             </p>
             <button
               className="card__btn"
-              onClick={() => handleModalOpen("location")}
+              onClick={handleLocationModalOpen}
             >
               подробнее
             </button>
@@ -83,39 +91,45 @@ const Services = () => {
         </div>
       </div>
 
-      
-      {isModalOpen && (
+      {isTransferModalOpen && (
         <RemoveScroll>
-          <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="modal-overlay" onClick={handleModalClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button
-                className="modal-close"
-                onClick={() => setIsModalOpen(false)}
-              >
+              <button className="modal-close" onClick={handleModalClose}>
                 ×
               </button>
-              {/* {selectedModal === "transfer" && (
-                  <FaPlane className="modal-icon" />
-                )} */}
-                <h2 className="modal-title">{modalContent[selectedModal]?.title}</h2>
-                <p className="modal-text">{modalContent[selectedModal]?.text}</p>
-                <img className="modal-img" src={modalContent[selectedModal].img} alt={modalContent[selectedModal].title}/>
-                {selectedModal === "transfer" && (
-                <ul className="modal-desc">
-                  {modalContent[selectedModal].desc.map((item, index) => (
-                    <li key={index} className="modal-desc-item">
-                      <span className="modal-desc-icon">{item.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <h2 className="modal-title">{modalContent.transfer.title}</h2>
+              <p className="modal-text">{modalContent.transfer.text}</p>
+              <img className="modal-img" src={modalContent.transfer.img} alt={modalContent.transfer.title}/>
+              <ul className="modal-desc">
+                {modalContent.transfer.desc.map((item, index) => (
+                  <li key={index} className="modal-desc-item">
+                    <span className="modal-desc">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
               <button className="transfer-btn">Заказать трансфер</button>
-              <div className="modal-icons">
-                
-                {selectedModal === "location" && (
-                  <IoLocationOutline className="modal-icon" />
-                )}
-              </div>
+            </div>
+          </div>
+        </RemoveScroll>
+      )}
+
+      {isLocationModalOpen && (
+        <RemoveScroll>
+          <div className="modal-overlay" onClick={handleModalClose}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={handleModalClose}>×</button>
+              <h2 className="modal-title">{modalContent.location.title}</h2>
+              <p className="modal-text">{modalContent.location.text}</p>
+              <img className="modal-img" src={modalContent.location.img} alt={modalContent.location.title}/>
+              <ul className="modal-desc">
+                {modalContent.location.desc.map((item, index) => (
+                  <li key={index} className="modal-desc-item">
+                    <span className="modal-desc">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+              <button className="transfer-btn">Узнать больше</button>
             </div>
           </div>
         </RemoveScroll>

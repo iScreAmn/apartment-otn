@@ -5,6 +5,7 @@ import avatar2 from "./avatars/avatar-2.webp"
 import avatar3 from "./avatars/avatar-3.webp"
 
 import carTransfer from "./tours/transfer_car.jpg"
+import location from "./tours/sololaki.webp"
 
 
 export {
@@ -14,4 +15,5 @@ export {
   avatar3,
 
   carTransfer,
+  location,
 }
