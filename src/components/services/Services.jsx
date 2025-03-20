@@ -94,12 +94,24 @@ const Services = () => {
               >
                 ×
               </button>
-              <h2>{modalContent[selectedModal]?.title}</h2>
-              <p>{modalContent[selectedModal]?.text}</p>
-              <div className="modal-icons">
-                {selectedModal === "transfer" && (
+              {/* {selectedModal === "transfer" && (
                   <FaPlane className="modal-icon" />
-                )}
+                )} */}
+                <h2 className="modal-title">{modalContent[selectedModal]?.title}</h2>
+                <p className="modal-text">{modalContent[selectedModal]?.text}</p>
+                <img className="modal-img" src={modalContent[selectedModal].img} alt={modalContent[selectedModal].title}/>
+                {selectedModal === "transfer" && (
+                <ul className="modal-desc">
+                  {modalContent[selectedModal].desc.map((item, index) => (
+                    <li key={index} className="modal-desc-item">
+                      <span className="modal-desc-icon">{item.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <button className="transfer-btn">Заказать трансфер</button>
+              <div className="modal-icons">
+                
                 {selectedModal === "location" && (
                   <IoLocationOutline className="modal-icon" />
                 )}
