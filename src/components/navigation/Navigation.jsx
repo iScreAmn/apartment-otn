@@ -34,10 +34,6 @@ const navigation = () => {
           </div>
           <ThemeSwitcher/>
         </nav>
-
-        <div className="home">
-          <div className="container"></div>
-        </div>
       </div>
     </header>
   );

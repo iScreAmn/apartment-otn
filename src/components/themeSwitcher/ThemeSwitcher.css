@@ -1,9 +1,9 @@
-.theme-toggle-container {
+/* .theme-toggle-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-}
+} */
 
 .checkbox {
   opacity: 0;

@@ -198,3 +198,16 @@
   }
 }
 
+@media (max-width: 393px) {
+  .services__wrapper {
+    width: 350px;
+  }
+
+  .services-title {
+    text-align: center;
+  }
+
+  .modal-content {
+    width: 370px;
+  }
+}

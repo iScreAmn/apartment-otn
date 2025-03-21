@@ -137,4 +137,8 @@
   .nav__toggle {
     display: block;
   }
+
+  .theme-toggle-container {
+    margin-right: 25px;
+  }
 }
