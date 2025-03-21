@@ -22,11 +22,11 @@
 .tour-tab-left {
   width: 50%;
   padding: 20px 30px;
-  background-color: #1a2c27;
+  background-color: var(--tab-background);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   margin-bottom: 30px;
-  color: var(--third-color);
+  color: var(--fourth-color);
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -34,17 +34,17 @@
 .tour-tab-right {
   width: 50%;
   padding: 20px 30px;
-  background-color: #1a2c27;
+  background-color: var(--tab-background);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-bottom: 30px;
-  color: var(--third-color);
+  color: var(--fourth-color);
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .active {
-  background-color: #000000;
+  background-color: var(--first-color);
 }
 
 .destinations__wrapper {
@@ -61,7 +61,7 @@
   border-radius: 20px;
   width: 360px;
   height: 300px;
-
+  color: var(--fourth-color);
   display: flex;
   flex-direction: column;
   row-gap: 3px;
@@ -98,14 +98,14 @@
 }
 
 .tour__title {
-  color: var(--third-color);
+  color: var(--fourth-color );
   font-size: 20px;
   margin-top: auto;
   z-index: 2;
 }
 
 .tour__subtitle {
-  color: var(--third-color);
+  color: var(--fourth-color);
   font-size: 10px;
   z-index: 2;
 }

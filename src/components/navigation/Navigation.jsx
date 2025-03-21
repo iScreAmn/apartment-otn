@@ -1,6 +1,10 @@
-import { motion } from "framer-motion";
 import { logo } from "../../assets/images";
+import ThemeSwitcher from '../themeSwitcher/ThemeSwitcher'; // Import the switcher
 import "./Navigation.css";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 const navigation = () => {
   return (
@@ -28,20 +32,7 @@ const navigation = () => {
               </li>
             </ul>
           </div>
-          <motion.button
-            className="nav__btn"
-            href="#!"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            onHoverStart={() => console.log("hover started!")}
-          >
-            Регистрация
-          </motion.button>
-          <button className="nav__toggle">
-            <div className="menu-icon-wrapper">
-              <div className="menu-icon"></div>
-            </div>
-          </button>
+          <ThemeSwitcher/>
         </nav>
 
         <div className="home">

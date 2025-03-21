@@ -41,6 +41,7 @@
 }
 
 .home__btns {
+  width: 425px;
   margin: 20px 0;
   margin: 20px 0;
   display: flex;
@@ -100,7 +101,7 @@
 }
 
 .home__description {
-  color: var(--second-color);
+  color: var(--third-color);
   max-width: 450px;
   font-size: 23.2px;
   font-weight: 200;
@@ -156,7 +157,7 @@
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 200;
-  color: var(--third-color);
+  color: var( --fourth-color);
   background-color: rgb(42 44 47 / 63%);
   border-radius: 30px;
   margin: 0 auto;

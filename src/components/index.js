@@ -6,5 +6,6 @@ export { default as Tours } from "./tours/Tours";
 export { default as Feedback } from "./feedback/Feedback";
 export { default as Location } from "./location/Location";
 export { default as Footer } from "./footer/Footer";
+export {default as ThemeSwitcher} from "./themeSwitcher/ThemeSwitcher";
 
 
