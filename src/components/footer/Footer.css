@@ -6,13 +6,13 @@
 
 .footer__wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .footer__copyright {
-  color: #fff;
+  color: var(--fourth-color);
 }
 
 .footer-span {
