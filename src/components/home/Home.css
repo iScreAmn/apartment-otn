@@ -158,7 +158,7 @@
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 200;
-  color: var( --fourth-color);
+  color: var(--text-color);
   background-color: rgb(42 44 47 / 63%);
   border-radius: 30px;
   margin: 0 auto;
@@ -177,6 +177,16 @@
   color: var(--first-color);
   font-weight: 300;
 }
+
+.location__wrapper {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+
+
 
 .booking-form {
   display: flex;
@@ -203,6 +213,8 @@
   transition: .5s linear;
   color: #fff;
 }
+
+
 
 @keyframes slideIn {
   from {
@@ -242,7 +254,10 @@
   color: #666;
 }
 
-
+.location {
+  display: flex;
+  height: 0;
+}
 
 iframe {
   width: 1000px;
