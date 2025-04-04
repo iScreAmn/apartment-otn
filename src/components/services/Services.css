@@ -49,7 +49,7 @@
 }
 
 .card__title {
-  color: var(--fourth-color);
+  color: var(--tab-color);
   margin-top: 15px;
   font-size: 20px;
 }
@@ -65,7 +65,7 @@
   border: 1px solid var(--third-color-hover);
   border-radius: 40px;
   padding: 15px 15px;
-  color: var(--fourth-color);
+  color: var(--second-color);
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 200;
@@ -75,7 +75,7 @@
 
 .card__btn:hover {
   background-color: var(--first-color);
-  color: var(--fourth-color);
+  color: var(--second-color);
 
 }
 
@@ -101,7 +101,7 @@
 
 .modal-content {
   background: var(--modal-background);
-  color: #1f1e1e;
+  color: var(--modal-text);
   padding: 2rem;
   border-radius: 15px;
   max-width: 500px;
