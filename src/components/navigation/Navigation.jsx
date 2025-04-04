@@ -1,5 +1,5 @@
 import { logo2 } from "../../assets/images";
-import ThemeSwitcher from '../themeSwitcher/ThemeSwitcher'; // Import the switcher
+import ThemeSwitcher from '../widgets/themeSwitcher/ThemeSwitcher';
 import "./Navigation.css";
 
 

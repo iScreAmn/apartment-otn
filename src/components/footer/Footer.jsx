@@ -1,4 +1,4 @@
-import Logo from "../logo/Logo";
+import Logo from "../widgets/logo/Logo";
 import "./Footer.css";
 
 const Footer = () => {

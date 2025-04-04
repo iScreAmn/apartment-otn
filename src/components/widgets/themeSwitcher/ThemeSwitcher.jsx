@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
+import { ThemeContext } from '../../../context/ThemeContext';
 import './ThemeSwitcher.css';
 import { FaMoon } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
