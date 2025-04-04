@@ -1,0 +1,108 @@
+.application {
+  margin: 80px 0;
+}
+
+.application__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.application__title {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--third-color);
+  text-transform: uppercase;
+}
+
+.application__title span {
+  color: var(--first-color);
+}
+
+.application__form {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.application__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.application__label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.application__input-wrapper {
+  position: relative;
+}
+
+.application__input {
+  width: 450px;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px 20px 20px 5px;
+  background-color: #fff;
+  color: var(--input-color);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.application__input:focus {
+  border-color: #b08e6abd;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.react-tel-input .form-control {
+  width: 450px !important;
+  padding: 12px 50px;
+  border-radius: 20px !important;
+  border: 1px solid #ccc !important;
+  color: var(--input-color);
+}
+
+.react-tel-input .country-list {
+  color: #2d2d2d;
+}
+
+.application__submit {
+  width: 450px;
+  padding: 15px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--first-color);
+  border: none;
+  border-radius: 5px 20px 20px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.application__submit:hover {
+  background-color: var(--btn-hover-color);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.application__image {
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+
+}
+
+.application__image img {
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+  transition: transform 0.8s ease-in-out;
+}
+
+.application__image:hover img {
+  transform: scale(1.1);
+}
+

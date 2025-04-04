@@ -1,4 +1,4 @@
-import { Navigation, Home, Services, Tours, Order, Footer } from "./components/index";
+import { Navigation, Home, Services, Tours, Order, Footer, Application } from "./components/index";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Order />
         <Services />
         <Tours />
+        <Application />
         {/* <Feedback/> */}
         {/* <Location /> */}
       </main>
