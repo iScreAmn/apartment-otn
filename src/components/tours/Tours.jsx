@@ -77,6 +77,7 @@ const Tours = () => {
               />
               <p className="modal-text">{selectedTour.description}</p>
               <p className="modal-price">{selectedTour.price}</p>
+              <button className="tours-btn">Заказать тур</button>
             </div>
           </div>
         </RemoveScroll>

@@ -26,7 +26,7 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   margin-bottom: 30px;
-  color: var(--fourth-color);
+  color: var(--tab-color);
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -38,7 +38,7 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-bottom: 30px;
-  color: var(--fourth-color);
+  color: var(--tab-color);
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -98,16 +98,32 @@
 }
 
 .tour__title {
-  color: var(--fourth-color );
+  color: var(--text-color);
   font-size: 20px;
   margin-top: auto;
   z-index: 2;
 }
 
 .tour__subtitle {
-  color: var(--fourth-color);
+  color: var(--text-color);
   font-size: 10px;
   z-index: 2;
+}
+
+.modal-text {
+  margin-top: 20px;
+}
+
+.tours-btn {
+  margin-top: 20px;
+  background-color: var(--btn-color);
+  border-radius: 10px;
+  padding: 15px 15px;
+  color: var(--fourth-color);
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 200;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (max-width: 393px) {
