@@ -1,10 +1,7 @@
-import { logo } from "../../assets/images";
+import { logo2 } from "../../assets/images";
 import ThemeSwitcher from '../themeSwitcher/ThemeSwitcher'; // Import the switcher
 import "./Navigation.css";
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fas);
 
 const navigation = () => {
   return (
@@ -13,7 +10,7 @@ const navigation = () => {
         <nav className="nav">
           <div className="nav__logo">
             <a href="#!">
-              <img src={logo} alt="Main Image" />
+              <img src={logo2} alt="Main Image" />
             </a>
           </div>
           <div className="nav__list">
