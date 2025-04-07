@@ -8,5 +8,6 @@ export { default as Location } from "./location/Location";
 export { default as Footer } from "./footer/Footer";
 export { default as ThemeSwitcher } from "./widgets/themeSwitcher/ThemeSwitcher";
 export { default as Application } from "./application/Application";
+export { default as Gallery } from "./gallery/Gallery";
 
 

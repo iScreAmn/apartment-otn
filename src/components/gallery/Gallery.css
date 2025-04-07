@@ -1,0 +1,37 @@
+.section-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--third-color);
+  text-transform: uppercase;
+
+  margin-bottom: 60px;
+}
+
+.slider {
+  margin: 60px auto;
+  width: 100%; /* Занимает всю ширину родителя */
+  max-width: 900px; /* Ограничьте максимальную ширину слайдера */
+}
+
+.slider-img {
+  margin: 0 auto; /* Центрируйте изображение */
+  display: block; /* Убедитесь, что изображение ведет себя как блочный элемент */
+}
+
+
+/* стрелки */
+
+.slick-prev,
+.slick-next {
+  z-index: 1; /* Убедитесь, что стрелки находятся поверх изображений */
+  width: 40px; /* Размер стрелок */
+  height: 40px;
+}
+
+.slick-prev {
+  left: 0; /* Расположите стрелку слева от изображения */
+}
+
+.slick-next {
+  right: 0; /* Расположите стрелку справа от изображения */
+}
