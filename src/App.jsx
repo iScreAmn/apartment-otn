@@ -1,4 +1,14 @@
-import { Navigation, Home, Services, Tours, Order, Footer, Application, Gallery } from "./components/index";
+import {
+  Navigation,
+  Home,
+  Services,
+  Tours,
+  Order,
+  Footer,
+  Application,
+  Gallery,
+} from "./components/index";
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   return (
@@ -8,13 +18,12 @@ function App() {
       <main>
         <Order />
         <Services />
+        <Gallery />
         <Tours />
         <Application />
-        <Gallery />
-        {/* <Feedback/> */}
-        {/* <Location /> */}
       </main>
-      <Footer/>
+      <Footer />
+      <ScrollToTop className="scroll-to-top" smooth top={300} />
     </>
   );
 }
