@@ -1,3 +1,7 @@
+.gallery {
+  padding: 40px;
+}
+
 .section-title {
   font-size: 25px;
   font-weight: 700;
@@ -9,15 +13,29 @@
 
 .slider {
   margin: 60px auto;
-  width: 100%; /* Занимает всю ширину родителя */
-  max-width: 900px; /* Ограничьте максимальную ширину слайдера */
+  max-width: 100%;
 }
 
-.slider-img {
-  margin: 0 auto; /* Центрируйте изображение */
-  display: block; /* Убедитесь, что изображение ведет себя как блочный элемент */
+.slick-list {
+  border-radius: 20px;
 }
 
+.slider-item {
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+
+.slider-item img {
+  margin: 0 auto;
+  transition: transform 0.8s ease-in-out;
+  /* border-radius: 20px; */
+
+}
+
+.slider-item:hover img {
+  transform: scale(1.1);
+}
 
 /* стрелки */
 
