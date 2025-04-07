@@ -1,14 +1,14 @@
 .footer {
   background-color: var(--third-color);
   padding: 20px 0 30px;
-
+  position: relative;
+  overflow: hidden;
 }
 
 .footer__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
 }
 
 .footer__copyright {
@@ -24,8 +24,23 @@
   color: var(--first-color);
 }
 
-@media (max-width: 353px) {
+.test-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 393px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+
+  .footer__info {
+    text-align: center;
+  }
+
   .footer__copyright {
     font-size: 13px;
+    margin-top: 20px;
   }
 }
