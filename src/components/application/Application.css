@@ -92,7 +92,6 @@
   overflow: hidden;
   position: relative;
   border-radius: 20px;
-
 }
 
 .application__image img {
@@ -104,6 +103,11 @@
 
 .application__image:hover img {
   transform: scale(1.1);
+}
+
+.location__map {
+  margin: 40px 0;
+  width: 100%;
 }
 
 @media (max-width: 1000px) {
