@@ -1,6 +1,9 @@
+// Logos
 import logo from "./logos/main-logo.webp"
-import logo2 from "./logos/main-logo-2.webp"
+import logo2 from "./logos/second-logo.webp"
 
+
+// Avatars
 import avatar1 from "./avatars/avatar-1.webp"
 import avatar2 from "./avatars/avatar-2.webp"
 import avatar3 from "./avatars/avatar-3.webp"

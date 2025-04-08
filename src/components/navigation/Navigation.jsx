@@ -1,16 +1,19 @@
-import { logo2 } from "../../assets/images";
+import { useTheme } from "../../context/ThemeContext";
+import { logo, logo2 } from "../../assets/images"; // Import both logos
 import ThemeSwitcher from '../widgets/themeSwitcher/ThemeSwitcher';
 import "./Navigation.css";
 
+const Navigation = () => {
+  const { theme } = useTheme(); // Get the current theme from the context
+  const currentLogo = theme === "dark" ? logo2 : logo; // Determine the logo based on the theme
 
-const navigation = () => {
   return (
     <header className="header">
       <div className="container">
         <nav className="nav">
           <div className="nav__logo">
             <a href="#!">
-              <img src={logo2} alt="Main Image" />
+              <img className="logo-img" src={currentLogo} alt="Logo" /> {/* Use the dynamic logo */}
             </a>
           </div>
           <div className="nav__list">
@@ -36,4 +39,4 @@ const navigation = () => {
   );
 };
 
-export default navigation;
+export default Navigation;
