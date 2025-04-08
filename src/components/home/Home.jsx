@@ -45,7 +45,8 @@ const Home = () => {
       <h2 className="services-title">
         Забронируй <span>Онлайн</span>
       </h2>
-      <div className="booking-form">
+
+      <div className="booking-form none">
         {/* Поле для выбора даты заезда */}
         <div className="form-group">
           <label htmlFor="check-in">Заезд:</label>
@@ -141,10 +142,10 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        {/* Основной блок с описанием */}
+        <h3 className="minutes">8 минут от Площади Свободы</h3>
+
         <div className="home__wrapper">
           <div className="home__action">
-            <h3 className="minutes">8 минут от Площади Свободы</h3>
             <h2 className="home__name">
               Old Tbilisi <span>Narikala</span>
             </h2>
@@ -179,9 +180,6 @@ const Home = () => {
             Лучшие апартаменты <span>в историческом районе города</span>
           </a>
         </div>
-        
-
-        
       </div>
 
       {/* Модальное окно с видео */}

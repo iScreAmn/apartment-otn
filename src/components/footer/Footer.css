@@ -11,6 +11,10 @@
   justify-content: space-between;
 }
 
+.footer__info{
+  
+}
+
 .footer__copyright {
   color: var(--fourth-color);
 }

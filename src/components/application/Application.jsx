@@ -16,7 +16,6 @@ const Application = () => {
               Остались вопросы? <br /> <span>мы с радостью ответим</span>
             </h2>
 
-            {/* Поле для ввода телефона с выбором страны */}
             <div className="application__form-group">
               <PhoneInput
                 country={"ge"}
@@ -26,10 +25,6 @@ const Application = () => {
                 buttonClass="application__phone-button"
                 placeholder="Ваш номер телефона"
               />
-            </div>
-
-            {/* Поле для ввода имени */}
-            <div className="application__form-group">
               <input
                 type="text"
                 id="name"
@@ -38,6 +33,7 @@ const Application = () => {
                 required
               />
             </div>
+
 
             {/* Кнопка отправки */}
             <button type="submit" className="application__submit">
@@ -49,9 +45,9 @@ const Application = () => {
           </div>
         </div>
         <iframe
-            src="https://www.google.com/maps/d/embed?mid=1mYOr5k7uKZ78g-fxljx42RQf1HkQdVg&ehbc=2E312F"
-            className="location__map"
-          ></iframe>
+          src="https://www.google.com/maps/d/embed?mid=1mYOr5k7uKZ78g-fxljx42RQf1HkQdVg&ehbc=2E312F"
+          className="location__map"
+        ></iframe>
       </div>
     </section>
   );
