@@ -34,7 +34,22 @@
 
 .nav__list a:hover {
   color: var(--third-color-hover);
-  
+}
+
+.nav__btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav__language {
+  background-color: var(--btn-color);
+  color: #fff;
+
+  padding: 9px 30px;
+  border-radius: 30px;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 .nav__btn {
@@ -64,6 +79,8 @@
 .nav__toggle {
   display: none;
 }
+
+
 
 .menu-icon-wrapper {
   --time: 0.1s;
