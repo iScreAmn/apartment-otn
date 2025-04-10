@@ -1,91 +1,79 @@
-import { ski, snowboard, tbilisi, svaneti, borjomi, kazbegi, supboard, walkingTour, wineTours, seaSide, bike, extreme } from "../assets/images"
+import { ski, snowboard, tbilisi, svaneti, borjomi, kazbegi, supboard, walkingTour, wineTours, seaSide, bike, extreme } from "../assets/images";
 
 export const summerTours = [
   {
-    title: "Сапборды",
-    price: "120$ за тур",
+    titleKey: "tours.summer.rafting.title",
+    descriptionKey: "tours.summer.rafting.description",
+    priceKey: "tours.summer.rafting.price",
     img: supboard,
-    description:
-      "Сплав по горным рекам Грузии на надувных лодках. Вас ждут незабываемые эмоции и живописные пейзажи.",
   },
   {
-    title: "Пешие прогулки",
-    price: "50$ за день",
+    titleKey: "tours.summer.hiking.title",
+    descriptionKey: "tours.summer.hiking.description",
+    priceKey: "tours.summer.hiking.price",
     img: walkingTour,
-    description:
-      "Исследуйте горные тропы и живописные долины Грузии. Наши гиды покажут вам самые красивые места.",
   },
   {
-    title: "Винные туры",
-    price: "80$ с дегустацией",
+    titleKey: "tours.summer.wine.title",
+    descriptionKey: "tours.summer.wine.description",
+    priceKey: "tours.summer.wine.price",
     img: wineTours,
-    description:
-      "Посетите знаменитые винодельни Грузии, попробуйте лучшие вина и узнайте секреты их производства.",
   },
   {
-    title: "Пляжный отдых",
-    price: "60$ трансфер",
+    titleKey: "tours.summer.sea.title",
+    descriptionKey: "tours.summer.sea.description",
+    priceKey: "tours.summer.sea.price",
     img: seaSide,
-    description:
-      "Насладитесь солнцем и морем на лучших пляжах Грузии. Мы организуем для вас комфортный трансфер.",
   },
   {
-    title: "Велотуры",
-    price: "75$ за маршрут",
+    titleKey: "tours.summer.bike.title",
+    descriptionKey: "tours.summer.bike.description",
+    priceKey: "tours.summer.bike.price",
     img: bike,
-    description:
-      "Откройте для себя Грузию с новой стороны, путешествуя на велосипеде по живописным маршрутам.",
   },
   {
-    title: "Экстремальный отдых",
-    price: "145$ с гидом",
+    titleKey: "tours.summer.extreme.title",
+    descriptionKey: "tours.summer.extreme.description",
+    priceKey: "tours.summer.extreme.price",
     img: extreme,
-    description:
-      "Посетите самые интересные достопримечательности Грузии с нашими опытными гидами.",
   },
 ];
 
 export const winterTours = [
   {
-    title: "Горные лыжи",
-    price: "150$ за день",
+    titleKey: "tours.winter.ski.title",
+    descriptionKey: "tours.winter.ski.description",
+    priceKey: "tours.winter.ski.price",
     img: ski,
-    description:
-      "Покорите горные вершины на лучших горнолыжных курортах Грузии. Мы предоставим вам все необходимое оборудование.",
   },
   {
-    title: "Сноубординг",
-    price: "140$ за день",
+    titleKey: "tours.winter.snowboard.title",
+    descriptionKey: "tours.winter.snowboard.description",
+    priceKey: "tours.winter.snowboard.price",
     img: snowboard,
-    description:
-      "Насладитесь катанием на сноуборде по заснеженным склонам Грузии. Наши инструкторы помогут вам освоить этот вид спорта.",
   },
   {
-    title: "Величественный Казбеги",
-    price: "200$ комплекс",
+    titleKey: "tours.winter.kazbegi.title",
+    descriptionKey: "tours.winter.kazbegi.description",
+    priceKey: "tours.winter.kazbegi.price",
     img: kazbegi,
-    description:
-      "Расслабьтесь и восстановите силы в лучших спа-курортах Грузии. Вас ждут термальные источники, массаж и другие процедуры.",
   },
   {
-    title: "Новогодняя столица",
-    price: "90$ маршрут",
+    titleKey: "tours.winter.tbilisi.title",
+    descriptionKey: "tours.winter.tbilisi.description",
+    priceKey: "tours.winter.tbilisi.price",
     img: tbilisi,
-    description:
-      "Отправьтесь в зимний поход по живописным местам Грузии. Наши гиды проведут вас по самым интересным маршрутам.",
   },
   {
-    title: "Снежная Сванетиа",
-    price: "100$ программа",
+    titleKey: "tours.winter.svaneti.title",
+    descriptionKey: "tours.winter.svaneti.description",
+    priceKey: "tours.winter.svaneti.price",
     img: svaneti,
-    description:
-      "Погрузитесь в атмосферу Рождества в Грузии. Вас ждут праздничные ярмарки, концерты и другие мероприятия.",
   },
   {
-    title: "Термальные источники",
-    price: "70$ посещение",
+    titleKey: "tours.winter.borjomi.title",
+    descriptionKey: "tours.winter.borjomi.description",
+    priceKey: "tours.winter.borjomi.price",
     img: borjomi,
-    description:
-      "Посетите термальные источники Грузии и насладитесь целебными свойствами воды.",
   },
 ];

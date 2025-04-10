@@ -5,7 +5,7 @@ import { RemoveScroll } from "react-remove-scroll";
 import { useLanguage } from "../../context/LanguageContext";
 
 const Tours = () => {
-  const [season, setSeason] = useState("winter");
+  const [season, setSeason] = useState("summer");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTour, setSelectedTour] = useState(null);
   const { t } = useLanguage();
@@ -26,8 +26,8 @@ const Tours = () => {
     <section className="tours" id="tours">
       <div className="container">
         <h2 className="services-title">
-          {t("tours.title")} <br/>
-          <span>{t("tours.span")}</span>
+          {t("tabs.title")} <br/>
+          <span>{t("tabs.span")}</span>
         </h2>
         <div className="tours__wrapper">
           <div className="toggle__wrapper">
@@ -35,13 +35,13 @@ const Tours = () => {
               className={`tour-tab-left ${season === "summer" ? "active" : ""}`}
               onClick={() => setSeason("summer")}
             >
-              {t("tours.summer")}
+              {t("tabs.summer")}
             </button>
             <button
               className={`tour-tab-right ${season === "winter" ? "active" : ""}`}
               onClick={() => setSeason("winter")}
             >
-              {t("tours.winter")}
+              {t("tabs.winter")}
             </button>
           </div>
           <div className={`destinations__wrapper ${season}`}>
@@ -54,10 +54,10 @@ const Tours = () => {
                 <img
                   className="tour__img"
                   src={tour.img}
-                  alt={tour.title}
+                  alt={t(tour.titleKey)}
                 />
-                <h3 className="tour__title">{tour.title}</h3>
-                <p className="tour__subtitle">{tour.price}</p>
+                <h3 className="tour__title">{t(tour.titleKey)}</h3>
+                <p className="tour__subtitle">{t(tour.priceKey)}</p>
               </div>
             ))}
           </div>
@@ -71,14 +71,14 @@ const Tours = () => {
               <button className="modal-close" onClick={handleModalClose}>
                 ×
               </button>
-              <h2 className="modal-title">{selectedTour.title}</h2>
+              <h2 className="modal-title">{t(selectedTour.titleKey)}</h2>
               <img
                 className="modal-img"
                 src={selectedTour.img}
-                alt={selectedTour.title}
+                alt={t(selectedTour.titleKey)}
               />
-              <p className="modal-text">{selectedTour.description}</p>
-              <p className="modal-price">{selectedTour.price}</p>
+              <p className="modal-text">{t(selectedTour.descriptionKey)}</p>
+              <p className="modal-price">{t(selectedTour.priceKey)}</p>
               <button className="tours-btn">Заказать тур</button>
             </div>
           </div>

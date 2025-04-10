@@ -7,8 +7,6 @@ import { modalContent } from "../../data/services";
 import { RemoveScroll } from "react-remove-scroll";
 import { useLanguage } from "../../context/LanguageContext";
 
-
-
 const Services = () => {
   const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);

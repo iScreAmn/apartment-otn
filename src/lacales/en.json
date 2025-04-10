@@ -68,18 +68,78 @@
     "span": "apartment"
   },
 
-  "tours": {
+  "tabs": {
     "title": "What to do in Georgia",
     "span": "in any season:",
-    
     "summer": "Summer Activities",
-    "winter": "Winter Activities",
+    "winter": "Winter Activities"
+  },
 
-    "summerTitle1": "Supboards",
-    "summerTitle2": "Walking Tours",
-    "summerTitle3": "Wine Tours",
-    "summerTitle4": "Beach Holidays",
-    "summerTitle5": "Cycling Tours",
-    "summerTitle6": "Extreme Activities"
+  "tours": {
+    "summer": {
+      "rafting": {
+        "title": "River Rafting",
+        "description": "Rafting down Georgia's mountain rivers on inflatable boats. Expect unforgettable emotions and scenic landscapes.",
+        "price": "120$ per tour"
+      },
+      "hiking": {
+        "title": "Hiking Tours",
+        "description": "Explore Georgia’s mountain trails and scenic valleys. Our guides will show you the most beautiful places.",
+        "price": "50$ per day"
+      },
+      "wine": {
+        "title": "Wine Tours",
+        "description": "Visit famous Georgian wineries, taste the finest wines, and discover the secrets of their production.",
+        "price": "80$ with tasting"
+      },
+      "sea": {
+        "title": "Seaside Holidays",
+        "description": "Enjoy the sun and sea on Georgia’s best beaches. We organize a comfortable transfer for you.",
+        "price": "60$ transfer"
+      },
+      "bike": {
+        "title": "Cycling Routes",
+        "description": "Discover Georgia from a new perspective by cycling through picturesque routes.",
+        "price": "75$ per route"
+      },
+      "extreme": {
+        "title": "Extreme Tours",
+        "description": "Visit Georgia’s most exciting sights with our experienced guides.",
+        "price": "145$ with guide"
+      }
+    },
+    "winter": {
+      "ski": {
+        "title": "Skiing",
+        "description": "Conquer the peaks at Georgia’s top ski resorts. We provide all the necessary equipment.",
+        "price": "150$ per day"
+      },
+      "snowboard": {
+        "title": "Snowboarding",
+        "description": "Enjoy snowboarding down Georgia’s snowy slopes. Our instructors will help you master the sport.",
+        "price": "140$ per day"
+      },
+      "kazbegi": {
+        "title": "Majestic Kazbegi",
+        "description": "Relax and recharge at Georgia’s top spa resorts. Hot springs, massages, and more await.",
+        "price": "200$ package"
+      },
+      "tbilisi": {
+        "title": "New Year Capital",
+        "description": "Go on a winter hike through Georgia’s beautiful locations. Our guides will lead you along the best routes.",
+        "price": "90$ tour"
+      },
+      "svaneti": {
+        "title": "Snowy Svaneti",
+        "description": "Immerse yourself in Georgia’s Christmas spirit. Expect fairs, concerts, and festive events.",
+        "price": "100$ program"
+      },
+      "borjomi": {
+        "title": "Thermal Springs",
+        "description": "Visit Georgia’s thermal springs and enjoy the healing properties of the water.",
+        "price": "70$ visit"
+      }
+    }
   }
+  
 }
