@@ -2,11 +2,13 @@ import { useState } from "react";
 import "./Tours.css";
 import { summerTours, winterTours } from "../../data/tours";
 import { RemoveScroll } from "react-remove-scroll";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Tours = () => {
   const [season, setSeason] = useState("winter");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTour, setSelectedTour] = useState(null);
+  const { t } = useLanguage();
 
   const handleTourClick = (tour) => {
     setSelectedTour(tour);
@@ -24,8 +26,8 @@ const Tours = () => {
     <section className="tours" id="tours">
       <div className="container">
         <h2 className="services-title">
-          Чем заняться в Грузии <br />
-          <span>в любой сезон:</span>
+          {t("tours.title")} <br/>
+          <span>{t("tours.span")}</span>
         </h2>
         <div className="tours__wrapper">
           <div className="toggle__wrapper">
@@ -33,13 +35,13 @@ const Tours = () => {
               className={`tour-tab-left ${season === "summer" ? "active" : ""}`}
               onClick={() => setSeason("summer")}
             >
-              Летний досуг
+              {t("tours.summer")}
             </button>
             <button
               className={`tour-tab-right ${season === "winter" ? "active" : ""}`}
               onClick={() => setSeason("winter")}
             >
-              Зимний досуг
+              {t("tours.winter")}
             </button>
           </div>
           <div className={`destinations__wrapper ${season}`}>

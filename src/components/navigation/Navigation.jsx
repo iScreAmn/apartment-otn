@@ -21,16 +21,16 @@ const Navigation = () => {
           <div className="nav__list">
             <ul>
               <li>
-                <a href="#!">{t("home")}</a>
+                <a href="#!">{t("navigation.home")}</a>
               </li>
               <li>
-                <a href="#services">{t("services")}</a>
+                <a href="#services">{t("navigation.services")}</a>
               </li>
               <li>
-                <a href="#tours">{t("tours")}</a>
+                <a href="#tours">{t("navigation.tours")}</a>
               </li>
               <li>
-                <a href="#application">{t("contacts")}</a>
+                <a href="#application">{t("navigation.contacts")}</a>
               </li>
             </ul>
           </div>
@@ -39,7 +39,7 @@ const Navigation = () => {
               className="nav__language"
               onClick={() => changeLanguage(language === "ru" ? "en" : "ru")}
             >
-              {t("languageSwitch")}
+              {t("navigation.languageSwitch")}
             </button>
             <ThemeSwitcher />
           </div>
