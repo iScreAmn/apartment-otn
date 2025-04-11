@@ -100,7 +100,7 @@ const Application = () => {
         </div>
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1mYOr5k7uKZ78g-fxljx42RQf1HkQdVg&ehbc=2E312F"
-          className="location__map"
+          className="location__map none"
         ></iframe>
       </div>
 

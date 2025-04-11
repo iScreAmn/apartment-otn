@@ -24,6 +24,7 @@
 
 .card {
   background-color: var(--modal-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   width: 360px;
   height: 300px;
@@ -47,33 +48,34 @@
 }
 
 .card__title {
-  color: var(--tab-color);
+  color: var(--third-color);
   margin-top: 15px;
   font-size: 20px;
+  font-weight: 400;
+
 }
 
 .card_subtitle {
-  color: var(--second-color);
+  color: var(--first-color);
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 300;
   width: 250px;
 }
 
 .card__btn {
-  border: 1px solid var(--third-color-hover);
+  border: 1px solid var(--first-color);
   border-radius: 40px;
   padding: 15px 15px;
-  color: var(--second-color);
+  color: var(--third-color);
   text-transform: uppercase;
   font-size: 15px;
-  font-weight: 200;
+  font-weight: 500;
   transition: all 0.5s ease-in-out;
-  /* width: fit-content; */
 }
 
 .card__btn:hover {
   background-color: var(--first-color);
-  color: var(--second-color);
+  color: var(--third-color);
 
 }
 
