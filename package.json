@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.6.3",
     "motion": "^12.4.0",
     "nuka-carousel": "^8.2.0",

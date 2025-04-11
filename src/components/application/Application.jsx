@@ -4,12 +4,13 @@ import "react-phone-input-2/lib/style.css";
 import "./Application.css";
 import { application } from "../../assets/images";
 import { useLanguage } from "../../context/LanguageContext";
-
+import emailjs from 'emailjs-com';
 
 const Application = () => {
   const [phone, setPhone] = useState(""); // Состояние для номера телефона
+  const [name, setName] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const { t } = useLanguage();
-
 
   return (
     <section className="application" id="application">
@@ -35,14 +36,49 @@ const Application = () => {
                 className="application__input"
                 placeholder={t('application.placeholder')}
                 required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
 
-
             {/* Кнопка отправки */}
-            <button type="submit" className="application__submit">
+            <button
+              type="button"
+              className="application__submit"
+              onClick={() => {
+                const phoneDigits = phone.replace(/\D/g, "");
+                if (!name.trim()) {
+                  alert("Пожалуйста, введите имя.");
+                  return;
+                }
+                if (phoneDigits.length !== 12) {
+                  alert("Телефон должен содержать ровно 12 цифр.");
+                  return;
+                }
+
+                const templateParams = {
+                  name: name,
+                  phone: phone,
+                };
+
+                emailjs
+                  .send('service_lou20hk', 'template_2sapypq', templateParams, 'iIFVY9HdC199NM9_c')
+                  .then(
+                    () => {
+                      setSuccessMessage("Ваша заявка успешно отправлена!");
+                      setName("");
+                      setPhone("");
+                    },
+                    (error) => {
+                      console.error('Ошибка отправки:', error);
+                      alert("Ошибка при отправке заявки. Пожалуйста, попробуйте позже.");
+                    }
+                  );
+              }}
+            >
               {t("application.button")}
             </button>
+            {successMessage && <p className="application__success">{successMessage}</p>}
           </form>
           <div className="application__image">
             <img src={application} alt="application" />
