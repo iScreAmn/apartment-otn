@@ -7,10 +7,54 @@ import { useLanguage } from "../../context/LanguageContext";
 import emailjs from 'emailjs-com';
 
 const Application = () => {
-  const [phone, setPhone] = useState(""); // Состояние для номера телефона
+  const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false); // Track submission state
+  const [showModal, setShowModal] = useState(false); // Track modal visibility
   const { t } = useLanguage();
+
+  const handleSubmit = () => {
+    const phoneDigits = phone.replace(/\D/g, "");
+    if (!name.trim()) {
+      alert("Пожалуйста, введите имя.");
+      return;
+    }
+    if (phoneDigits.length !== 12) {
+      alert("Телефон должен содержать ровно 12 цифр.");
+      return;
+    }
+
+    setShowModal(true); // Show modal
+    setIsSubmitting(true); // Disable modal close
+
+    const templateParams = {
+      name: name,
+      phone: phone,
+    };
+
+    emailjs
+      .send('service_lou20hk', 'template_2sapypq', templateParams, 'iIFVY9HdC199NM9_c')
+      .then(
+        () => {
+          setSuccessMessage("Ваша заявка успешно отправлена!");
+          setName("");
+          setPhone("");
+          setTimeout(() => {
+            setShowModal(false); // Close modal after success animation
+            setSuccessMessage(""); // Clear success message
+          }, 2000); // Adjust duration as needed
+        },
+        (error) => {
+          console.error('Ошибка отправки:', error);
+          alert("Ошибка при отправке заявки. Пожалуйста, попробуйте позже.");
+          setShowModal(false); // Close modal on error
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false); // Re-enable modal close
+      });
+  };
 
   return (
     <section className="application" id="application">
@@ -18,7 +62,7 @@ const Application = () => {
         <div className="application__wrapper">
           <form className="application__form">
             <h2 className="application__title">
-              {t("application.title")} <br/> <span>{t("application.span")}</span>
+              {t("application.title")} <br /> <span>{t("application.span")}</span>
             </h2>
 
             <div className="application__form-group">
@@ -41,40 +85,10 @@ const Application = () => {
               />
             </div>
 
-            {/* Кнопка отправки */}
             <button
               type="button"
               className="application__submit"
-              onClick={() => {
-                const phoneDigits = phone.replace(/\D/g, "");
-                if (!name.trim()) {
-                  alert("Пожалуйста, введите имя.");
-                  return;
-                }
-                if (phoneDigits.length !== 12) {
-                  alert("Телефон должен содержать ровно 12 цифр.");
-                  return;
-                }
-
-                const templateParams = {
-                  name: name,
-                  phone: phone,
-                };
-
-                emailjs
-                  .send('service_lou20hk', 'template_2sapypq', templateParams, 'iIFVY9HdC199NM9_c')
-                  .then(
-                    () => {
-                      setSuccessMessage("Ваша заявка успешно отправлена!");
-                      setName("");
-                      setPhone("");
-                    },
-                    (error) => {
-                      console.error('Ошибка отправки:', error);
-                      alert("Ошибка при отправке заявки. Пожалуйста, попробуйте позже.");
-                    }
-                  );
-              }}
+              onClick={handleSubmit}
             >
               {t("application.button")}
             </button>
@@ -89,6 +103,26 @@ const Application = () => {
           className="location__map"
         ></iframe>
       </div>
+
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            {isSubmitting ? (
+              <p>Отправка заявки...</p>
+            ) : (
+              <p className="success-animation">Заявка успешно отправлена!</p>
+            )}
+            {!isSubmitting && (
+              <button
+                className="modal-close"
+                onClick={() => setShowModal(false)}
+              >
+                &times;
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
