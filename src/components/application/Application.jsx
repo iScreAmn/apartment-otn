@@ -3,17 +3,21 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "./Application.css";
 import { application } from "../../assets/images";
+import { useLanguage } from "../../context/LanguageContext";
+
 
 const Application = () => {
   const [phone, setPhone] = useState(""); // Состояние для номера телефона
+  const { t } = useLanguage();
+
 
   return (
-    <section className="application">
+    <section className="application" id="application">
       <div className="container">
         <div className="application__wrapper">
           <form className="application__form">
             <h2 className="application__title">
-              Остались вопросы? <br /> <span>мы с радостью ответим</span>
+              {t("application.title")} <br/> <span>{t("application.span")}</span>
             </h2>
 
             <div className="application__form-group">
@@ -23,13 +27,13 @@ const Application = () => {
                 onChange={(value) => setPhone(value)}
                 inputClass="application__phone-input"
                 buttonClass="application__phone-button"
-                placeholder="Ваш номер телефона"
+                placeholder=""
               />
               <input
                 type="text"
                 id="name"
                 className="application__input"
-                placeholder="Ваше имя"
+                placeholder={t('application.placeholder')}
                 required
               />
             </div>
@@ -37,7 +41,7 @@ const Application = () => {
 
             {/* Кнопка отправки */}
             <button type="submit" className="application__submit">
-              Оставить заявку
+              {t("application.button")}
             </button>
           </form>
           <div className="application__image">
