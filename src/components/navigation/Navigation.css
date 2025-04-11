@@ -43,13 +43,28 @@
 }
 
 .nav__language {
-  background-color: var(--btn-color);
-  color: #fff;
+  border: 1px solid var(--first-color);
+  color: var(--third-color);
 
-  padding: 9px 30px;
+  padding: 6px 0;
+  width: 60px;
   border-radius: 30px;
   font-size: 13px;
   text-transform: uppercase;
+  transition: .2s ease-in-out;
+}
+
+.nav__language:hover {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+.moon-icon{
+  color: var(--third-color);
+}
+
+.sun-icon{
+  color: var(--third-color);
 }
 
 .nav__btn {
@@ -143,6 +158,9 @@
 .menu-icon.menu-icon--active::after {
   transform: rotate(-45deg);
 }
+
+
+
 
 
 @media (max-width: 1000px) {
