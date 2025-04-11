@@ -34,7 +34,37 @@
 
 .nav__list a:hover {
   color: var(--third-color-hover);
-  
+}
+
+.nav__btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav__language {
+  border: 1px solid var(--first-color);
+  color: var(--third-color);
+
+  padding: 6px 0;
+  width: 60px;
+  border-radius: 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: .2s ease-in-out;
+}
+
+.nav__language:hover {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+.moon-icon{
+  color: var(--third-color);
+}
+
+.sun-icon{
+  color: var(--third-color);
 }
 
 .nav__btn {
@@ -64,6 +94,8 @@
 .nav__toggle {
   display: none;
 }
+
+
 
 .menu-icon-wrapper {
   --time: 0.1s;
@@ -126,6 +158,9 @@
 .menu-icon.menu-icon--active::after {
   transform: rotate(-45deg);
 }
+
+
+
 
 
 @media (max-width: 1000px) {

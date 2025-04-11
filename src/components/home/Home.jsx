@@ -4,6 +4,7 @@ import { FaVideo, FaCalendarAlt } from "react-icons/fa";
 import { RemoveScroll } from "react-remove-scroll";
 import { motion } from "motion/react";
 import { slideInVariants } from "../../../utils/animation";
+import { useLanguage } from '../../context/LanguageContext';
 
 const Home = () => {
   // Состояния для управления модальными окнами и формой
@@ -15,6 +16,8 @@ const Home = () => {
   const [guests, setGuests] = useState(1); // Количество гостей
 
   const videoId = "riZAVELEHpk"; // ID видео на YouTube
+
+  const { t } = useLanguage();
 
   // Эффект для автоматического открытия модального окна через 15 секунд
   useEffect(() => {
@@ -43,7 +46,7 @@ const Home = () => {
   const renderBookingForm = () => (
     <section className="booking-section" id="booking">
       <h2 className="services-title">
-        Забронируй <span>Онлайн</span>
+        {t('home.book')} <span>{t('home.bookSpan')}</span>
       </h2>
 
       <div className="booking-form none">
@@ -142,7 +145,7 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <h3 className="minutes">8 минут от Площади Свободы</h3>
+        <h3 className="minutes">{t('home.minutes')}</h3>
 
         <div className="home__wrapper">
           <div className="home__action">
@@ -155,29 +158,28 @@ const Home = () => {
                 className="home__btn"
                 onClick={() => setIsModalOpen(true)}
               >
-                Забронировать
+                {t('home.booking')}
               </button>
               {/* Кнопка для открытия модального окна с видео */}
               <button
                 className="home__video-btn"
                 onClick={() => setIsVideoOpen(true)}
               >
-                Смотреть дом
+                {t('home.video')}
                 <FaVideo />
               </button>
             </div>
           </div>
           <div className="home__description">
             <p>
-              Аренда уютных апартаментов в самом сердце старого Тбилиси, прямо
-              под крепостью Нарикала. Тебе у нас точно понравится
+              {t('home.description')}
             </p>
           </div>
         </div>
         {/* Ссылка на апартаменты */}
         <div className="home__img">
           <a href="#!" className="home__link">
-            Лучшие апартаменты <span>в историческом районе города</span>
+            {t('home.cover')} <span>{t('home.span')}</span>
           </a>
         </div>
       </div>

@@ -1,18 +1,16 @@
-/* * * * SERVICES * * * */
-
 .services {
   padding: 50px 0 50px;
 }
 
 .services-title {
-  color: var(--first-color);
+  color: var(--second-color);
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
 
 .services-title span {
-  color: var(--third-color);
+  color: var(--first-color);
 }
 
 .services__wrapper {

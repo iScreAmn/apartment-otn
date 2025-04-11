@@ -2,8 +2,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Gallery.css";
 import Slider from "react-slick";
+import { useLanguage } from "../../context/LanguageContext";
+
 
 const Gallery = () => {
+  const { t } = useLanguage();
   var settings = {
     dots: true,
     autoplay: false,
@@ -15,7 +18,7 @@ const Gallery = () => {
   return (
     <section className="gallery">
       <div className="container">
-        <h2 className="section-title">Наши апартаменты</h2>
+        <h2 className="section-title">{t("gallery.title")} <span>{t("gallery.span")}</span></h2>
         <Slider className="slider" {...settings}>
           <div className="slider-item">
             <img className="slider-img" src="https://scontent.fkut1-1.fna.fbcdn.net/v/t39.30808-6/482988117_1772622686628662_4017925264504040547_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=TLcYTsEMH1kQ7kNvwENQzBA&_nc_oc=AdlNp1JGcoYA5y7ddNFl2f8nToDhJxIuZ7OgFYcXlnulQM38XYBu5ADoY3X5RQPlepxvcslCoo0TzEeLSIeQYn4a&_nc_zt=23&_nc_ht=scontent.fkut1-1.fna&_nc_gid=FxAxDe6kHaeK8nXq1cIDGg&oh=00_AYGdFbpDrp5LqAPShcPrm_dPpj9LbySKwbMC-a_y_lc_Xg&oe=67F640F4" alt="qwerty" />

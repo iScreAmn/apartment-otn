@@ -1,10 +1,12 @@
+import { logo, logo2 } from "../../assets/images";
 import { useTheme } from "../../context/ThemeContext";
-import { logo, logo2 } from "../../assets/images"; // Import both logos
-import ThemeSwitcher from '../widgets/themeSwitcher/ThemeSwitcher';
+import ThemeSwitcher from "../widgets/themeSwitcher/ThemeSwitcher";
+import { useLanguage } from "../../context/LanguageContext";
 import "./Navigation.css";
 
 const Navigation = () => {
-  const { theme } = useTheme(); // Get the current theme from the context
+  const { theme } = useTheme();
+  const { language, changeLanguage, t } = useLanguage();
   const currentLogo = theme === "dark" ? logo2 : logo; // Determine the logo based on the theme
 
   return (
@@ -13,26 +15,34 @@ const Navigation = () => {
         <nav className="nav">
           <div className="nav__logo">
             <a href="#!">
-              <img className="logo-img" src={currentLogo} alt="Logo" /> {/* Use the dynamic logo */}
+              <img className="logo-img" src={currentLogo} alt="Logo" />
             </a>
           </div>
           <div className="nav__list">
             <ul>
               <li>
-                <a href="#!">Главная</a>
+                <a href="#!">{t("navigation.home")}</a>
               </li>
               <li>
-                <a href="#services">Услуги</a>
+                <a href="#services">{t("navigation.services")}</a>
               </li>
               <li>
-                <a href="#tours">Туры</a>
+                <a href="#tours">{t("navigation.tours")}</a>
               </li>
               <li>
-                <a href="#!">Контакты</a>
+                <a href="#application">{t("navigation.contacts")}</a>
               </li>
             </ul>
           </div>
-          <ThemeSwitcher/>
+          <div className="nav__btns">
+            <button
+              className="nav__language"
+              onClick={() => changeLanguage(language === "ru" ? "en" : "ru")}
+            >
+              {t("navigation.languageSwitch")}
+            </button>
+            <ThemeSwitcher />
+          </div>
         </nav>
       </div>
     </header>

@@ -54,3 +54,6 @@
   right: 0; /* Расположите стрелку справа от изображения */
 }
 
+.section-title span {
+  color: var(--first-color);
+}

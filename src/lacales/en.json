@@ -1,0 +1,138 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "tours": "Tours",
+    "contacts": "Contacts",
+    "languageSwitch": "РУ"
+  },
+  
+  "home": {
+    "minutes": "Just 8 minutes from Freedom Square",
+    "booking": "Book your stay",
+    "video": "Online Tour",
+    "description": "Stay in a cozy apartment in Old Tbilisi historic center, nestled beneath Narikala Fortress. We promise you’ll feel right at home!",
+    "cover": "Top apartments ",
+    "span": "in the historic city center",
+    "book": "Book",
+    "bookSpan": "Online"
+  },
+  
+  "services": {
+    "servicesTitle": "We",
+    "servicesSpan": "Provide:",
+    "servCardTitle1": "High-Speed Internet",
+    "servCardSubtitle1": "Our apartments feature internet access and high-speed WiFi with various connectivity options",
+    "servCardTitle2": "HD Television",
+    "servCardSubtitle2": "Enjoy an extensive selection of channels and movies in multiple languages",
+    "servCardTitle3": "Airport Transfer",
+    "servCardSubtitle3": "We can arrange transfers from any airport in the country at your convenience",
+    "servCardTitle4": "Prime Location",
+    "servCardSubtitle4": "The apartments are located in the heart of the old town, with all top attractions nearby",
+    "servCardTitle5": "Parking",
+    "servCardSubtitle5": "On-site courtyard safety parking with quick access to your vehicle",
+    "servCardTitle6": "Tours",
+    "servCardSubtitle6": "We can arrange interesting tours all around the country during your visit",
+    "servCardButton": "Learn More"
+  },
+  
+  "transferText": "We offer comfortable and reliable transfers from any airport in Georgia directly to your accommodation. Our drivers will meet you with a name sign, assist with your luggage, and take you right to the door of your hotel or apartment.",
+  "transfer1": "✅ Comfortable vehicles",
+  "transfer2": "✅ Meet & greet with name sign at the airport",
+  "transfer3": "✅ Luggage assistance",
+  "transfer4": "✅ 24/7 customer support",
+  "transfer5": "✅ Fixed rates with no hidden fees",
+  "transferButton": "Order transfer",
+  "locationText": "Our apartments are located in the very center of Tbilisi, just an 8-minute walk from Freedom Square. This is the perfect spot for those who want to enjoy the charm of the old town while being within easy reach of all major attractions.",
+  "location1": "📍 Steps away from top landmarks",
+  "location2": "🚶 Walkable to all main sights",
+  "location3": "🚕 Excellent transport connections",
+  "location4": "🌃 Stunning panoramic views",
+  "locationButton": "Learn More",
+  "gallery": {
+    "title": "Our",
+    "span": "apartment"
+  },
+  
+  "tabs": {
+    "title": "What to do in Georgia",
+    "span": "in any season:",
+    "summer": "Summer Activities",
+    "winter": "Winter Activities"
+  },
+  
+  "tours": {
+    "summer": {
+      "rafting": {
+        "title": "River Rafting",
+        "description": "Rafting down Georgia's mountain rivers on inflatable boats. Expect unforgettable emotions and scenic landscapes.",
+        "price": "120$ per tour"
+      },
+      "hiking": {
+        "title": "Hiking Tours",
+        "description": "Explore Georgia’s mountain trails and scenic valleys. Our guides will show you the most beautiful places.",
+        "price": "50$ per day"
+      },
+      "wine": {
+        "title": "Wine Tours",
+        "description": "Visit famous Georgian wineries, taste the finest wines, and discover the secrets of their production.",
+        "price": "80$ with tasting"
+      },
+      "sea": {
+        "title": "Seaside Holidays",
+        "description": "Enjoy the sun and sea on Georgia’s best beaches. We organize a comfortable transfer for you.",
+        "price": "60$ transfer"
+      },
+      "bike": {
+        "title": "Cycling Routes",
+        "description": "Discover Georgia from a new perspective by cycling through picturesque routes.",
+        "price": "75$ per route"
+      },
+      "extreme": {
+        "title": "Extreme Tours",
+        "description": "Visit Georgia’s most exciting sights with our experienced guides.",
+        "price": "145$ with guide"
+      }
+    },
+    
+    "winter": {
+      "ski": {
+        "title": "Skiing",
+        "description": "Conquer the peaks at Georgia’s top ski resorts. We provide all the necessary equipment.",
+        "price": "150$ per day"
+      },
+      "snowboard": {
+        "title": "Snowboarding",
+        "description": "Enjoy snowboarding down Georgia’s snowy slopes. Our instructors will help you master the sport.",
+        "price": "140$ per day"
+      },
+      "kazbegi": {
+        "title": "Majestic Kazbegi",
+        "description": "Relax and recharge at Georgia’s top spa resorts. Hot springs, massages, and more await.",
+        "price": "200$ package"
+      },
+      "tbilisi": {
+        "title": "New Year Capital",
+        "description": "Go on a winter hike through Georgia’s beautiful locations. Our guides will lead you along the best routes.",
+        "price": "90$ tour"
+      },
+      "svaneti": {
+        "title": "Snowy Svaneti",
+        "description": "Immerse yourself in Georgia’s Christmas spirit. Expect fairs, concerts, and festive events.",
+        "price": "100$ program"
+      },
+      "borjomi": {
+        "title": "Thermal Springs",
+        "description": "Visit Georgia’s thermal springs and enjoy the healing properties of the water.",
+        "price": "70$ visit"
+      }
+    }
+  },
+
+  "application": {
+    "title": "Got some questions?",
+    "span": "We are happy to answer them",
+    "placeholder": "Your name",
+    "button": "Leave a request"
+  }
+}
