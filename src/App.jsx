@@ -8,24 +8,27 @@ import {
   Application,
   Gallery,
 } from "./components/index";
-import ScrollToTop from "react-scroll-to-top";
-import { LanguageProvider } from './context/LanguageContext';
+import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeProvider } from "./context/ThemeContext";
+import IconButtons from "./context/IconButtons";
 
 function App() {
   return (
     <>
       <LanguageProvider>
-        <Navigation />
-        <Home />
-        <main>
-          <Order />
-          <Services />
-          <Gallery />
-          <Tours />
-          <Application />
-        </main>
-        <Footer />
-        <ScrollToTop className="scroll-to-top" smooth top={300} />
+        <ThemeProvider>
+          <Navigation />
+          <Home />
+          <main>
+            <Order />
+            <Services />
+            <Gallery />
+            <Tours />
+            <Application />
+          </main>
+          <Footer />
+          <IconButtons />
+        </ThemeProvider>
       </LanguageProvider>
     </>
   );

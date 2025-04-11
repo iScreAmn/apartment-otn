@@ -83,11 +83,7 @@ body {
   padding: 0 var(--container-padding);
 }
 
-.scroll-to-top {
-  background-color: #fff !important;
-  box-shadow: #2d2d2d 0px 0px 10px !important;
-  border-radius: 50% !important;
-}
+
 
 /* Reset and base styles  */
 * {
@@ -172,9 +168,72 @@ button::-moz-focus-inner {
 }
 
 label {
+  color: var(--first-color);
 	cursor: pointer;
+  background-color: transparent !important;
 }
 
 legend {
 	display: block;
+}
+
+/* Scroll-Buttons */
+
+.scroll-to-top {
+  background-color: #fff !important;
+  box-shadow: #2d2d2d 0px 0px 10px !important;
+  border-radius: 50% !important;
+
+  right: 40px !important;
+  bottom: 240px !important;
+  position: fixed !important;
+  z-index: 2;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.icon-buttons {
+  position: fixed;
+  bottom: 240px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;
+}
+
+.icon-buttons.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.icon-button {
+  /* background-color: #fff; */
+  /* box-shadow: #2d2d2d 0px 0px 10px; */
+
+
+  color: var(--third-color);
+  border-radius: 50vh;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icon-button:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f086;
+}
+
+.icon-button.bold {
+  font-weight: bold;
 }
