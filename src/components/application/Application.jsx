@@ -4,7 +4,9 @@ import "react-phone-input-2/lib/style.css";
 import "./Application.css";
 import { application } from "../../assets/images";
 import { useLanguage } from "../../context/LanguageContext";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
+import Logo from "../widgets/logo/Logo";
+import FallingText from "../widgets/fallingText/FallingText";
 
 const Application = () => {
   const [phone, setPhone] = useState("");
@@ -34,19 +36,24 @@ const Application = () => {
     };
 
     emailjs
-      .send('service_lou20hk', 'template_2sapypq', templateParams, 'iIFVY9HdC199NM9_c')
+      .send(
+        "service_lou20hk",
+        "template_2sapypq",
+        templateParams,
+        "iIFVY9HdC199NM9_c"
+      )
       .then(
         () => {
-          setSuccessMessage("Ваша заявка успешно отправлена!");
+          setSuccessMessage("");
           setName("");
           setPhone("");
           setTimeout(() => {
             setShowModal(false); // Close modal after success animation
             setSuccessMessage(""); // Clear success message
-          }, 2000); // Adjust duration as needed
+          }, 1000000); // Adjust duration as needed
         },
         (error) => {
-          console.error('Ошибка отправки:', error);
+          console.error("Ошибка отправки:", error);
           alert("Ошибка при отправке заявки. Пожалуйста, попробуйте позже.");
           setShowModal(false); // Close modal on error
         }
@@ -62,7 +69,8 @@ const Application = () => {
         <div className="application__wrapper">
           <form className="application__form">
             <h2 className="application__title">
-              {t("application.title")} <br /> <span>{t("application.span")}</span>
+              {t("application.title")} <br />{" "}
+              <span>{t("application.span")}</span>
             </h2>
 
             <div className="application__form-group">
@@ -78,7 +86,7 @@ const Application = () => {
                 type="text"
                 id="name"
                 className="application__input"
-                placeholder={t('application.placeholder')}
+                placeholder={t("application.placeholder")}
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -92,7 +100,9 @@ const Application = () => {
             >
               {t("application.button")}
             </button>
-            {successMessage && <p className="application__success">{successMessage}</p>}
+            {successMessage && (
+              <p className="application__success">{successMessage}</p>
+            )}
           </form>
           <div className="application__image">
             <img src={application} alt="application" />
@@ -106,11 +116,32 @@ const Application = () => {
 
       {showModal && (
         <div className="modal-overlay">
-          <div className="modal-content">
+          <div className="modal-content-application">
             {isSubmitting ? (
-              <p>Отправка заявки...</p>
+              <Logo
+                text="OLD•TBILISI•NARIKALA•"
+                onHover="speedUp"
+                spinDuration={20}
+                className="loading-animation"
+              />
             ) : (
-              <p className="success-animation">Заявка успешно отправлена!</p>
+              <FallingText
+                text={`Заявка успешно отправлена! Мы скоро с вами свяжемся`}
+                highlightWords={[
+                  "Мы",
+                  "скоро",
+                  "с",
+                  "вами",
+                  "свяжемся",
+                ]}
+                highlightClass="highlighted"
+                trigger="hover"
+                backgroundColor="transparent"
+                wireframes={false}
+                gravity={0.56}
+                fontSize="28px"
+                mouseConstraintStiffness={0.9}
+              />
             )}
             {!isSubmitting && (
               <button

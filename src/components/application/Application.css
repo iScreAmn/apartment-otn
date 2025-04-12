@@ -9,7 +9,6 @@
 
 .application__title {
   font-size: 25px;
-  font-weight: 700;
   color: var(--third-color);
   text-transform: uppercase;
 }
@@ -173,16 +172,19 @@
   animation: fadeIn 0.3s ease-out;
 }
 
-.modal-content {
+.modal-content-application {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--modal-background, #fff);
   color: var(--modal-text, #333);
   padding: 2rem;
   border-radius: 15px;
-  max-width: 500px;
+  width: 500px;
+  height: 200px;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: slideUp 0.3s ease-out;
-  /* text-align: center; */
 }
 
 .modal-close {
@@ -200,10 +202,16 @@
   color: #666;
 }
 
+.loading-animation {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--third-color);
+}
+
 .success-animation {
   font-size: 1.2rem;
   font-weight: bold;
-  color: green;
+  color: var(--third-color);
   /* animation: fadeOut 2s ease-in-out forwards; */
 }
 
