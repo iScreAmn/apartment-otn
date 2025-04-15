@@ -67,19 +67,21 @@ const Tours = () => {
       {isModalOpen && selectedTour && (
         <RemoveScroll>
           <div className="modal-overlay" onClick={handleModalClose}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button className="modal-close" onClick={handleModalClose}>
-                ×
-              </button>
-              <h2 className="modal-title">{t(selectedTour.titleKey)}</h2>
-              <img
-                className="modal-img"
-                src={selectedTour.img}
-                alt={t(selectedTour.titleKey)}
-              />
-              <p className="modal-text">{t(selectedTour.descriptionKey)}</p>
-              <p className="modal-price">{t(selectedTour.priceKey)}</p>
-              <button className="tours-btn">Заказать тур</button>
+              <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                  <h2 className="modal-title">{t(selectedTour.titleKey)}</h2>
+                  <div className="modal__wrapper">
+                    <button className="modal-close" onClick={handleModalClose}>
+                      ×
+                    </button>
+                    <img
+                      className="modal-img"
+                      src={selectedTour.img}
+                      alt={t(selectedTour.titleKey)}
+                    />  
+                    <p className="modal-text">{t(selectedTour.descriptionKey)}</p>
+                    <p className="modal-price">{t(selectedTour.priceKey)}</p>
+                    <button className="tours-btn">Заказать тур</button>
+                </div>
             </div>
           </div>
         </RemoveScroll>
