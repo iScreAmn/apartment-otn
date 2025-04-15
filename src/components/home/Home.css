@@ -194,6 +194,66 @@
   flex-direction: column;
 }
 
+.booking-section {
+  width: 1100px !important;
+  height: 450px !important;
+}
+
+.booking-main-title {
+  color: var(--third-color);
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.booking-main-title span {
+  color: var(--first-color);
+}
+
+.booking__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin-top: 80px;
+
+}
+
+.booking-text {
+  width: 400px;
+}
+
+.booking-text svg {
+  color: var(--first-color);
+  font-size: 30px;
+}
+
+.booking__title {
+  color: var(--third-color);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.booking__subtitle {
+  color: var(--third-color);
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+img.booking-img {
+  width: 500px;
+  border-radius: 20px;
+}
+
+.booking-socials {
+  display: flex;
+  gap: 40px;
+  margin-top: 45px;
+}
+
+
 /* MODAL-WINDOW */
 
 .home-modal-overlay {
@@ -372,7 +432,7 @@ iframe {
   .home__link {
     font-size: 24px;
   }
-  
+
   .home__description {
     display: none;
   }
@@ -398,7 +458,7 @@ iframe {
     padding: unset;
   }
 
-  .home__wrapper{
+  .home__wrapper {
     padding-bottom: 20px;
   }
 
@@ -454,7 +514,7 @@ iframe {
 
   .home-modal-content {
     width: 370px;
-    
+
   }
 
   .booking-section {

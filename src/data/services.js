@@ -9,7 +9,6 @@ export const modalContent = {
       "transfer1",
       "transfer2",
       "transfer3",
-      "transfer4",
       "transfer5",
     ],
 

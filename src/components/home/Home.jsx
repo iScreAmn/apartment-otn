@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 import { FaVideo, FaCalendarAlt } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
+import { TbBrandBooking } from "react-icons/tb";
+import { booking } from "../../assets/images";
 import { RemoveScroll } from "react-remove-scroll";
 import { motion } from "motion/react";
 import { slideInVariants } from "../../../utils/animation";
@@ -45,9 +50,27 @@ const Home = () => {
   // Функция для рендеринга формы бронирования
   const renderBookingForm = () => (
     <section className="booking-section" id="booking">
-      <h2 className="services-title">
+      <h2 className="booking-main-title">
         {t('home.book')} <span>{t('home.bookSpan')}</span>
       </h2>
+      <div className="booking__wrapper">
+        <div className="booking-text">
+          <h2 className="booking__title">
+            Сайт находится на стадии разработки
+          </h2>
+          <p className="booking__subtitle">
+            Переходите на сайт наших партнеров Booking.com или свяжитесь с нами
+            напрямую
+          </p>
+          <ul className="booking-socials">
+            <li><a href=""><TbBrandBooking /></a></li>
+            <li><a href=""><FaInstagram /></a></li>
+            <li><a href=""><IoLogoWhatsapp /></a></li>
+            <li><a href=""><FaTelegram /></a></li>
+          </ul>
+        </div>
+        <img className="booking-img" src={booking} alt="booking" />
+      </div>
 
       <div className="booking-form none">
         {/* Поле для выбора даты заезда */}

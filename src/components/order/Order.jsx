@@ -22,7 +22,8 @@ const Order = () => {
       <h2 className="services-title">
         Забронируй <span>Онлайн</span>
       </h2>
-      <div className="booking-form">
+      
+      <div className="booking-form none">
         <div className="form-group">
           <label htmlFor="check-in">Заезд:</label>
           <motion.div
@@ -78,7 +79,7 @@ const Order = () => {
             onChange={(e) => setGuests(Number(e.target.value))}
           />
         </motion.div>
-        <motion.div 
+        <motion.div
           className="order__wrapper"
           initial="hidden"
           whileInView="visible"

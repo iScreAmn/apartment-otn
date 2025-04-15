@@ -10,6 +10,9 @@ import avatar3 from "./avatars/avatar-3.webp"
 
 import carTransfer from "./tours/transfer_car.jpg"
 import location from "./tours/sololaki.webp"
+import booking from "./tours/booking.jpg"
+
+
 
 // Apartment
 import application from "./apartment/3.jpg"
@@ -43,6 +46,7 @@ export {
 
   carTransfer,
   location,
+  booking,
 
   application,
 
