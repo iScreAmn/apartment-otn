@@ -17,8 +17,8 @@ const ThemeSwitcher = () => {
         onChange={toggleTheme}
       />
       <label htmlFor="checkbox" className="label">
-        <FaMoon className="moon-icon"/>
         <FaSun className="sun-icon"/>
+        <FaMoon className="moon-icon"/>
         <div className="ball"></div>
       </label>
     </div>
