@@ -35,13 +35,14 @@ const Navigation = () => {
             </ul>
           </div>
           <div className="nav__btns">
+            <ThemeSwitcher />
             <button
               className="nav__language"
               onClick={() => changeLanguage(language === "ru" ? "en" : "ru")}
             >
               {t("navigation.languageSwitch")}
             </button>
-            <ThemeSwitcher />
+            
           </div>
         </nav>
       </div>

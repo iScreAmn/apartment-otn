@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* gap: 205px; */
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -46,7 +47,7 @@
   border: 1px solid var(--first-color);
   color: var(--third-color);
 
-  padding: 6px 0;
+  padding: 8.5px 0;
   width: 60px;
   border-radius: 30px;
   font-size: 13px;
