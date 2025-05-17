@@ -26,16 +26,19 @@ const Home = () => {
 
   // Эффект для автоматического открытия модального окна через 15 секунд
   useEffect(() => {
+    const disableAutoModal = import.meta.env.VITE_DISABLE_AUTO_MODAL === 'true';;
+    if (disableAutoModal) return;
+  
     const lastShownTime = localStorage.getItem("lastShownTime");
     const currentTime = new Date().getTime();
-
+  
     if (!lastShownTime || currentTime - lastShownTime > 15000) {
       const timer = setTimeout(() => {
         setIsOpen(true);
         localStorage.setItem("lastShownTime", currentTime.toString());
       }, 15000);
-
-      return () => clearTimeout(timer); // Очистка таймера при размонтировании
+  
+      return () => clearTimeout(timer);
     }
   }, []);
 
