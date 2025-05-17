@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 import { FaVideo, FaCalendarAlt } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandBooking } from "react-icons/tb";
 import { booking } from "../../assets/images";
+import { RiTelegramLine } from "react-icons/ri";
 import { RemoveScroll } from "react-remove-scroll";
 import { motion } from "motion/react";
 import { slideInVariants } from "../../../utils/animation";
@@ -66,10 +66,10 @@ const Home = () => {
             напрямую
           </p>
           <ul className="booking-socials">
-            <li><a href=""><TbBrandBooking /></a></li>
-            <li><a href=""><FaInstagram /></a></li>
-            <li><a href=""><IoLogoWhatsapp /></a></li>
-            <li><a href=""><FaTelegram /></a></li>
+            <li className="socials-icons"><a href=""><TbBrandBooking /></a></li>
+            <li className="socials-icons"><a href=""><FaInstagram /></a></li>
+            <li className="socials-icons"><a href=""><IoLogoWhatsapp /></a></li>
+            <li className="socials-icons"><a href=""><RiTelegramLine /></a></li>
           </ul>
         </div>
         <img className="booking-img" src={booking} alt="booking" />

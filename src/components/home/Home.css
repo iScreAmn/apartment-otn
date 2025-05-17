@@ -253,6 +253,15 @@ img.booking-img {
   margin-top: 45px;
 }
 
+.booking-socials svg {
+  transition: transform 0.3s ease;
+}
+
+.booking-socials svg:hover {
+  transform: scale(1.2);
+  color: #b68857;
+}
+
 
 /* MODAL-WINDOW */
 
