@@ -16,7 +16,7 @@ const Gallery = () => {
     slidesToScroll: 1,
   };
   return (
-    <section className="gallery">
+    <section className="gallery none" >
       <div className="container">
         <h2 className="section-title">{t("gallery.title")} <span>{t("gallery.span")}</span></h2>
         <Slider className="slider" {...settings}>

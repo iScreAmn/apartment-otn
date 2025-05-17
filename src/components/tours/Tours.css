@@ -127,6 +127,11 @@
   transition: all 0.5s ease-in-out;
 }
 
+.tours-img {
+  max-width: 45%;
+  border-radius: 10px;
+}
+
 @media (max-width: 1150px) {
   .tour {
     width: 330px;

@@ -26,7 +26,7 @@ const Tours = () => {
     <section className="tours" id="tours">
       <div className="container">
         <h2 className="services-title">
-          {t("tabs.title")} <br/>
+          {t("tabs.title")} <br />
           <span>{t("tabs.span")}</span>
         </h2>
         <div className="tours__wrapper">
@@ -38,7 +38,9 @@ const Tours = () => {
               {t("tabs.summer")}
             </button>
             <button
-              className={`tour-tab-right ${season === "winter" ? "active" : ""}`}
+              className={`tour-tab-right ${
+                season === "winter" ? "active" : ""
+              }`}
               onClick={() => setSeason("winter")}
             >
               {t("tabs.winter")}
@@ -67,21 +69,23 @@ const Tours = () => {
       {isModalOpen && selectedTour && (
         <RemoveScroll>
           <div className="modal-overlay" onClick={handleModalClose}>
-              <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                  <h2 className="modal-title">{t(selectedTour.titleKey)}</h2>
-                  <div className="modal__wrapper">
-                    <button className="modal-close" onClick={handleModalClose}>
-                      ×
-                    </button>
-                    <img
-                      className="modal-img"
-                      src={selectedTour.img}
-                      alt={t(selectedTour.titleKey)}
-                    />  
-                    <p className="modal-text">{t(selectedTour.descriptionKey)}</p>
-                    <p className="modal-price">{t(selectedTour.priceKey)}</p>
-                    <button className="tours-btn">Заказать тур</button>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <h2 className="modal-title">{t(selectedTour.titleKey)}</h2>
+              <div className="modal__wrapper">
+                <button className="modal-close" onClick={handleModalClose}>
+                  ×
+                </button>
+                <img
+                  className="tours-img"
+                  src={selectedTour.img}
+                  alt={t(selectedTour.titleKey)}
+                />
+                <div className="tours-content">
+                  <p className="modal-text">{t(selectedTour.descriptionKey)}</p>
+                  <p className="modal-price">{t(selectedTour.priceKey)}</p>
+                  <button className="tours-btn">Заказать тур</button>
                 </div>
+              </div>
             </div>
           </div>
         </RemoveScroll>
