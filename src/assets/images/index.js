@@ -17,6 +17,11 @@ import booking from "./tours/booking.jpg"
 // Apartment
 import application from "./apartment/3.jpg"
 
+import sliderPic1 from "./apartment/3.jpg"
+import sliderPic2 from "./apartment/5.jpg"
+import sliderPic3 from "./apartment/6.jpg"
+import sliderPic4 from "./apartment/7.jpg"
+
 
 // Summer Tours
 import walkingTour from "./tours/summer/walkingTour.jpg"
@@ -49,6 +54,10 @@ export {
   booking,
 
   application,
+  sliderPic1,
+  sliderPic2,
+  sliderPic3,
+  sliderPic4,
 
   walkingTour,
   supboard,
