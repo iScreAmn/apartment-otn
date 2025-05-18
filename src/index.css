@@ -251,6 +251,6 @@ legend {
 }
 
 .slick-prev:before, .slick-next:before {
-  color: var(--third-color);
+  color: var(--third-color) !important;
   /* font-size: 30px; */
 }

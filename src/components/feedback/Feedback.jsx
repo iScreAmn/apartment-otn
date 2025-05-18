@@ -13,7 +13,7 @@ const Feedback = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
   };
