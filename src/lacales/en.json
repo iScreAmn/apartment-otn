@@ -133,5 +133,41 @@
     "span": "We are happy to answer them",
     "placeholder": "Your name",
     "button": "Leave a request"
+  },
+
+  "feedback": {
+    "title": "What people",
+    "span": "say about us",
+    "btn": "All reviews",
+    "review1": {
+        "title": "Excellent service",
+        "text": "Really liked the apartment. Right in the city center, I recommend!",
+        "name": "Deborah"
+      },
+    "review2": {
+        "title": "Wonderful",
+        "text": "Everything is like in the pictures and even more 😍",
+        "name": "Nadine"
+      },
+    "review3": {
+        "title": "Great hosts",
+        "text": "The hosts helped with transfer and check-in, everything went well",
+        "name": "Anthony"
+      },
+    "review4": {
+        "title": "Inspiring",
+        "text": "I wrote my track here, the muse lives in these places ☺️",
+        "name": "Xenia"
+      },
+    "review5": {
+        "title": "So great",
+        "text": "Doing photo shoots here is a real pleasure",
+        "name": "Ashly"
+      },
+    "review6": {
+        "title": "Good vacation",
+        "text": "I adore historical districts, I was so lucky with the apartment",
+        "name": "Steewen"
+      }
   }
 }
