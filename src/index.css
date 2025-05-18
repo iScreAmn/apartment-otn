@@ -35,7 +35,7 @@ body {
   --toggle-color: #cbcbcb;
   --third-color-hover: #8b7156;
 
-  --modal-color: #e1e1e1;
+  --modal-color: #f5f3f3;
   --modal-text: #2d2d2d;
   --modal-background: #ebebeb;
 
@@ -236,4 +236,21 @@ legend {
 
 .icon-button.bold {
   font-weight: bold;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--third-color) !important;
+}
+
+.slick-dots li button:before {
+  color: var(--third-color-hover) !important;
+}
+
+.slick-prev, .slick-next {
+  width: unset !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: var(--third-color);
+  /* font-size: 30px; */
 }

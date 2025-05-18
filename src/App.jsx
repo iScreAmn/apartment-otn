@@ -7,6 +7,7 @@ import {
   Footer,
   Application,
   Gallery,
+  Feedback,
 } from "./components/index";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -24,6 +25,7 @@ function App() {
             <Services />
             <Gallery />
             <Tours />
+            <Feedback />
             <Application />
           </main>
           <Footer />

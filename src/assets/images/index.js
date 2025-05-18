@@ -4,9 +4,12 @@ import logo2 from "./logos/second-logo.webp"
 
 
 // Avatars
-import avatar1 from "./avatars/avatar-1.webp"
-import avatar2 from "./avatars/avatar-2.webp"
-import avatar3 from "./avatars/avatar-3.webp"
+import avatar1 from "./avatars/avatar1.webp"
+import avatar2 from "./avatars/avatar2.webp"
+import avatar3 from "./avatars/avatar3.webp"
+import avatar4 from "./avatars/avatar4.webp"
+import avatar5 from "./avatars/avatar5.webp"
+import avatar6 from "./avatars/avatar6.webp"
 
 import carTransfer from "./tours/transfer_car.jpg"
 import location from "./tours/sololaki.webp"
@@ -48,6 +51,9 @@ export {
   avatar1,
   avatar2,
   avatar3,
+  avatar4,
+  avatar5,
+  avatar6,
 
   carTransfer,
   location,
