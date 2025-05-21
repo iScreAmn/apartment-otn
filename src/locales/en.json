@@ -132,7 +132,8 @@
     "title": "Got some questions?",
     "span": "We are happy to answer them",
     "placeholder": "Your name",
-    "button": "Leave a request"
+    "button1": "Leave a request",
+    "button2": "Text our Bot"
   },
 
   "feedback": {

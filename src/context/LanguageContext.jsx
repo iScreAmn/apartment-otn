@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from 'react';
-import ru from '../lacales/ru.json';
-import en from '../lacales/en.json';
+import ru from '../locales/ru.json';
+import en from '../locales/en.json';
 
 const LanguageContext = createContext();
 
