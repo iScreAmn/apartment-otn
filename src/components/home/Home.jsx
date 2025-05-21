@@ -9,7 +9,7 @@ import { RiTelegramLine } from "react-icons/ri";
 import { RemoveScroll } from "react-remove-scroll";
 import { motion } from "motion/react";
 import { slideInVariants } from "../../../utils/animation";
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from "../../context/LanguageContext";
 
 const Home = () => {
   // Состояния для управления модальными окнами и формой
@@ -26,18 +26,18 @@ const Home = () => {
 
   // Эффект для автоматического открытия модального окна через 15 секунд
   useEffect(() => {
-    const disableAutoModal = import.meta.env.VITE_DISABLE_AUTO_MODAL === 'true';;
+    const disableAutoModal = import.meta.env.VITE_DISABLE_AUTO_MODAL === "true";
     if (disableAutoModal) return;
-  
+
     const lastShownTime = localStorage.getItem("lastShownTime");
     const currentTime = new Date().getTime();
-  
+
     if (!lastShownTime || currentTime - lastShownTime > 15000) {
       const timer = setTimeout(() => {
         setIsOpen(true);
         localStorage.setItem("lastShownTime", currentTime.toString());
       }, 15000);
-  
+
       return () => clearTimeout(timer);
     }
   }, []);
@@ -54,7 +54,7 @@ const Home = () => {
   const renderBookingForm = () => (
     <section className="booking-section" id="booking">
       <h2 className="booking-main-title">
-        {t('home.book')} <span>{t('home.bookSpan')}</span>
+        {t("home.book")} <span>{t("home.bookSpan")}</span>
       </h2>
       <div className="booking__wrapper">
         <div className="booking-text">
@@ -66,10 +66,26 @@ const Home = () => {
             напрямую
           </p>
           <ul className="booking-socials">
-            <li className="socials-icons"><a href=""><TbBrandBooking /></a></li>
-            <li className="socials-icons"><a href=""><FaInstagram /></a></li>
-            <li className="socials-icons"><a href=""><IoLogoWhatsapp /></a></li>
-            <li className="socials-icons"><a href=""><RiTelegramLine /></a></li>
+            <li className="socials-icons">
+              <a href="">
+                <TbBrandBooking />
+              </a>
+            </li>
+            <li className="socials-icons">
+              <a href="">
+                <FaInstagram />
+              </a>
+            </li>
+            <li className="socials-icons">
+              <a href="">
+                <IoLogoWhatsapp />
+              </a>
+            </li>
+            <li className="socials-icons">
+              <a href="">
+                <RiTelegramLine />
+              </a>
+            </li>
           </ul>
         </div>
         <img className="booking-img" src={booking} alt="booking" />
@@ -171,10 +187,24 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <h3 className="minutes">{t('home.minutes')}</h3>
+        <motion.h3
+          className="minutes"
+          initial={{ y: -30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
+          {t("home.minutes")}
+        </motion.h3>
 
         <div className="home__wrapper">
-          <div className="home__action">
+          <motion.div
+            className="home__action"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             <h2 className="home__name">
               Old Tbilisi <span>Narikala</span>
             </h2>
@@ -184,30 +214,39 @@ const Home = () => {
                 className="home__btn"
                 onClick={() => setIsModalOpen(true)}
               >
-                {t('home.booking')}
+                {t("home.booking")}
               </button>
               {/* Кнопка для открытия модального окна с видео */}
               <button
                 className="home__video-btn"
                 onClick={() => setIsVideoOpen(true)}
               >
-                {t('home.video')}
+                {t("home.video")}
                 <FaVideo />
               </button>
             </div>
-          </div>
-          <div className="home__description">
-            <p>
-              {t('home.description')}
-            </p>
-          </div>
+          </motion.div>
+          <motion.div
+            className="home__description"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            <p>{t("home.description")}</p>
+          </motion.div>
         </div>
-        {/* Ссылка на апартаменты */}
-        <div className="home__img">
+        <motion.div
+          className="home__img"
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <a href="#!" className="home__link">
-            {t('home.cover')} <span>{t('home.span')}</span>
+            {t("home.cover")} <span>{t("home.span")}</span>
           </a>
-        </div>
+        </motion.div>
       </div>
 
       {/* Модальное окно с видео */}

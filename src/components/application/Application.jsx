@@ -12,6 +12,7 @@ import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandBooking } from "react-icons/tb";
 import { RiTelegramLine } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const Application = () => {
   const [phone, setPhone] = useState("");
@@ -72,11 +73,23 @@ const Application = () => {
     <section className="application" id="application">
       <div className="container">
         <div className="application__wrapper">
-          <form className="application__form">
-            <h2 className="application__title">
+          <motion.form
+            className="application__form"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            <motion.h2
+              className="application__title"
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.5 }}
+            >
               {t("application.title")} <br />{" "}
               <span>{t("application.span")}</span>
-            </h2>
+            </motion.h2>
 
             <div className="application__form-group">
               <PhoneInput
@@ -116,10 +129,16 @@ const Application = () => {
             {successMessage && (
               <p className="application__success">{successMessage}</p>
             )}
-          </form>
-          <div className="application__image">
+          </motion.form>
+          <motion.div
+            className="application__image"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             <img src={application} alt="application" />
-          </div>
+          </motion.div>
         </div>
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1mYOr5k7uKZ78g-fxljx42RQf1HkQdVg&ehbc=2E312F"
