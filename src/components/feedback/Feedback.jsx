@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Feedback.css";
 import { useLanguage } from "../../context/LanguageContext";
 import { feedback } from "../../data/feedback";
-
+import CustomNextArrow from '../widgets/sliderArrows/CustomNextArrow';
+import CustomPrevArrow from '../widgets/sliderArrows/CustomPrevArrow';
 
 const Feedback = () => {
   const settings = {
@@ -16,6 +17,8 @@ const Feedback = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
   };
 
   const { t } = useLanguage();

@@ -238,19 +238,31 @@ legend {
   font-weight: bold;
 }
 
+/* Цвет нижних точек */
 .slick-dots li.slick-active button:before {
   color: var(--third-color) !important;
 }
-
 .slick-dots li button:before {
   color: var(--third-color-hover) !important;
 }
 
+/* Ширина и цвет кнопок переключения */
 .slick-prev, .slick-next {
-  width: unset !important;
+  /* width: unset !important; */
 }
-
 .slick-prev:before, .slick-next:before {
-  color: var(--third-color) !important;
+  /* color: var(--third-color) !important; */
   /* font-size: 30px; */
 }
+
+/* Позиция слайдера */
+.slick-track {
+  /* left: 46px; */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+
