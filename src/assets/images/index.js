@@ -15,7 +15,9 @@ import carTransfer from "./tours/transfer_car.jpg"
 import location from "./tours/sololaki.webp"
 import booking from "./tours/booking.jpg"
 
-
+// Other
+import block1 from "./other/ai-bot.webp"
+import block2 from "./other/flame-jumper.webp"
 
 // Apartment
 import application from "./apartment/3.jpg"
@@ -54,6 +56,9 @@ export {
   avatar4,
   avatar5,
   avatar6,
+
+  block1,
+  block2,
 
   carTransfer,
   location,

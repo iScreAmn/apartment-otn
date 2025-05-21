@@ -2,11 +2,16 @@ import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "./Application.css";
-import { application } from "../../assets/images";
+import { application, block1, block2 } from "../../assets/images";
 import { useLanguage } from "../../context/LanguageContext";
 import emailjs from "emailjs-com";
 import Logo from "../widgets/logo/Logo";
 import FallingText from "../widgets/fallingText/FallingText";
+
+import { IoLogoWhatsapp } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
+import { TbBrandBooking } from "react-icons/tb";
+import { RiTelegramLine } from "react-icons/ri";
 
 const Application = () => {
   const [phone, setPhone] = useState("");
@@ -98,7 +103,15 @@ const Application = () => {
               className="application__submit"
               onClick={handleSubmit}
             >
-              {t("application.button")}
+              {t("application.button1")}
+            </button>
+            <button
+              href="https://t.me/myveryfirsttimetg_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="application__submit application__submit--telegram"
+            >
+              {t("application.button2")}
             </button>
             {successMessage && (
               <p className="application__success">{successMessage}</p>
@@ -110,8 +123,52 @@ const Application = () => {
         </div>
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1mYOr5k7uKZ78g-fxljx42RQf1HkQdVg&ehbc=2E312F"
-          className="location__map none"
+          className="location__map"
         ></iframe>
+        <div className="application__titles">
+          <h3 className="location__title">📍 Lado Asatiani #20</h3>
+          <h3>🚨 Другие наши продукты</h3>
+        </div>
+        <div className="social__wrapper">
+          <div className="application-socials">
+            <div className="social-icon">
+              <a className="social-icon-link" href="#">
+                <TbBrandBooking />
+              </a>
+            </div>
+            <div className="social-icon">
+              <a className="social-icon-link" href="#">
+                <FaInstagram />
+              </a>
+            </div>
+            <div className="social-icon">
+              <a className="social-icon-link" href="#">
+                <IoLogoWhatsapp />
+              </a>
+            </div>
+            <div className="social-icon">
+              <a className="social-icon-link" href="#">
+                <RiTelegramLine />
+              </a>
+            </div>
+          </div>
+          <div className="application-blocks">
+            <a
+              href="https://t.me/myveryfirsttimetg_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={block1} alt="#" />
+            </a>
+            <a
+              href="https://iscreamn.github.io/game-jumper/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={block2} alt="#" />
+            </a>
+          </div>
+        </div>
       </div>
 
       {showModal && (
@@ -127,13 +184,7 @@ const Application = () => {
             ) : (
               <FallingText
                 text={`Заявка успешно отправлена! Мы скоро с вами свяжемся`}
-                highlightWords={[
-                  "Мы",
-                  "скоро",
-                  "с",
-                  "вами",
-                  "свяжемся",
-                ]}
+                highlightWords={["Мы", "скоро", "с", "вами", "свяжемся"]}
                 highlightClass="highlighted"
                 trigger="hover"
                 backgroundColor="transparent"
