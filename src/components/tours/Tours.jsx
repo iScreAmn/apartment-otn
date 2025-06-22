@@ -3,7 +3,7 @@ import "./Tours.css";
 import { summerTours, winterTours } from "../../data/tours";
 import { RemoveScroll } from "react-remove-scroll";
 import { useLanguage } from "../../context/LanguageContext";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Tours = () => {
   const [season, setSeason] = useState("summer");
@@ -11,8 +11,8 @@ const Tours = () => {
   const [selectedTour, setSelectedTour] = useState(null);
   const { t } = useLanguage();
 
-  const handleTourClick = (tour) => {
-    setSelectedTour(tour);
+  const handleTourClick = (tour, index) => {
+    setSelectedTour({ ...tour, index });
     setIsModalOpen(true);
   };
 
@@ -21,22 +21,41 @@ const Tours = () => {
     setSelectedTour(null);
   };
 
-  const currentTours = season === "summer" ? summerTours : winterTours;
+  const currentTours = season === "summer" ? summerTours.slice(0, 4) : winterTours.slice(0, 4);
 
   const containerVariants = {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.2,
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
       },
     },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 30, scale: 0.9 },
+    show: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1]
+      }
+    },
   };
+
+  const cardHover = {
+    scale: 1.0,
+    y: -9,
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut"
+    }
+  };
+
+
 
   return (
     <section className="tours" id="tours">
@@ -69,56 +88,138 @@ const Tours = () => {
             </button>
           </div>
           <motion.div
-            className={`destinations__wrapper ${season}`}
+            className="destinations__wrapper-modern"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+            key={season}
           >
-            {currentTours.map((tour, index) => (
-              <motion.div
-                className="tour"
-                key={index}
-                onClick={() => handleTourClick(tour)}
-                variants={cardVariants}
-              >
-                <img
-                  className="tour__img"
-                  src={tour.img}
-                  alt={t(tour.titleKey)}
-                />
-                <h3 className="tour__title">{t(tour.titleKey)}</h3>
-                <p className="tour__subtitle">{t(tour.priceKey)}</p>
-              </motion.div>
-            ))}
+            {/* Первый ряд */}
+            <div className="destinations__row">
+              {currentTours.slice(0, 2).map((tour, index) => (
+                <motion.div
+                  className="tour-card-modern"
+                  key={`${season}-${index}`}
+                  layoutId={`tour-card-${season}-${index}`}
+                  onClick={() => handleTourClick(tour, index)}
+                  variants={cardVariants}
+                  whileHover={cardHover}
+                  whileTap={{ scale: 0.95 }}
+                  style={{
+                    borderRadius: 20,
+                    cursor: "pointer",
+                    flex: index === 0 ? "1.3" : "1"
+                  }}
+                >
+                                    <motion.div 
+                    className="tour-card-image-container"
+                    layoutId={`tour-image-${season}-${index}`}
+                  >
+                    <img
+                      className="tour-card-image"
+                      src={tour.img}
+                      alt={t(tour.titleKey)}
+                    />
+                    <div className="tour-card-overlay" />
+                    <div className="tour-card-text-overlay">
+                      <h3 className="modal-tour-title">{t(tour.titleKey)}</h3>
+                      <p className="modal-tour-price">{t(tour.priceKey)}</p>
+                    </div>
+                  </motion.div>
+ 
+                  </motion.div>
+              ))}
+            </div>
+            
+            {/* Второй ряд */}
+            <div className="destinations__row">
+              {currentTours.slice(2, 4).map((tour, index) => (
+                <motion.div
+                  className="tour-card-modern"
+                  key={`${season}-${index + 2}`}
+                  layoutId={`tour-card-${season}-${index + 2}`}
+                  onClick={() => handleTourClick(tour, index + 2)}
+                  variants={cardVariants}
+                  whileHover={cardHover}
+                  whileTap={{ scale: 0.95 }}
+                  style={{
+                    borderRadius: 20,
+                    cursor: "pointer",
+                    flex: index === 0 ? "1" : "1.3"
+                  }}
+                >
+                                     <motion.div 
+                     className="tour-card-image-container"
+                     layoutId={`tour-image-${season}-${index + 2}`}
+                   >
+                     <img
+                       className="tour-card-image"
+                       src={tour.img}
+                       alt={t(tour.titleKey)}
+                     />
+                     <div className="tour-card-overlay" />
+                     <div className="tour-card-text-overlay">
+                       <h3 className="modal-tour-title">{t(tour.titleKey)}</h3>
+                       <p className="modal-tour-price">{t(tour.priceKey)}</p>
+                     </div>
+                   </motion.div>
+                   
+                  </motion.div>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
       </div>
 
-      {isModalOpen && selectedTour && (
-        <RemoveScroll>
-          <div className="modal-overlay" onClick={handleModalClose}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <h2 className="modal-title">{t(selectedTour.titleKey)}</h2>
-              <div className="modal__wrapper">
-                <button className="modal-close" onClick={handleModalClose}>
+      <AnimatePresence>
+        {isModalOpen && selectedTour && (
+          <RemoveScroll>
+            <motion.div 
+              className="modal-overlay-modern" 
+              onClick={handleModalClose}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div 
+                className="modal-content-modern" 
+                layoutId={`tour-card-${season}-${selectedTour.index}`}
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  borderRadius: 20,
+                  display: "flex",
+                  flexDirection: "column"
+                }}
+              >
+                <button className="modal-close-modern" onClick={handleModalClose}>
                   ×
                 </button>
-                <img
-                  className="tours-img"
-                  src={selectedTour.img}
-                  alt={t(selectedTour.titleKey)}
-                />
-                <div className="tours-content">
-                  <p className="modal-text">{t(selectedTour.descriptionKey)}</p>
-                  <p className="modal-price">{t(selectedTour.priceKey)}</p>
-                  <button className="tours-btn">Заказать тур</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </RemoveScroll>
-      )}
+                <motion.div 
+                  className="modal-image-section"
+                  layoutId={`tour-image-${season}-${selectedTour.index}`}
+                >
+                  <img
+                    className="modal-tour-image"
+                    src={selectedTour.img}
+                    alt={t(selectedTour.titleKey)}
+                  />
+                </motion.div>
+                <motion.div 
+                  className="modal-content-section"
+                  layoutId={`tour-content-${season}-${selectedTour.index}`}
+                >
+                  <h2 className="modal-tour-title">{t(selectedTour.titleKey)}</h2>
+                  <p className="modal-tour-description">{t(selectedTour.descriptionKey)}</p>
+                  <div className="modal-tour-price">{t(selectedTour.priceKey)}</div>
+                  <button className="modal-tour-btn">Заказать тур</button>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          </RemoveScroll>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

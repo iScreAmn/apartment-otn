@@ -47,6 +47,10 @@ body {
 
   --tab-background: #2d2d2d;
   --tab-color: #fff;
+
+  /* Shadow colors */
+  --shadow-dark: rgba(163, 177, 198, 0.6);
+  --shadow-light: rgba(255, 255, 255, 0.7);
 }
 
 /* Dark theme */
