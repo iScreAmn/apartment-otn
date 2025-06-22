@@ -2,6 +2,8 @@ import { logo, logo2 } from "../../assets/images";
 import { useTheme } from "../../context/ThemeContext";
 import ThemeSwitcher from "../widgets/themeSwitcher/ThemeSwitcher";
 import { useLanguage } from "../../context/LanguageContext";
+import { Link } from 'react-router-dom';
+
 import "./Navigation.css";
 
 const Navigation = () => {
@@ -21,7 +23,10 @@ const Navigation = () => {
           <div className="nav__list">
             <ul>
               <li>
-                <a href="#!">{t("navigation.home")}</a>
+                <Link to="/">{t("navigation.home")}</Link>
+              </li>
+              <li>
+                <Link to="/about">{t("navigation.about")}</Link>
               </li>
               <li>
                 <a href="#services">{t("navigation.services")}</a>
