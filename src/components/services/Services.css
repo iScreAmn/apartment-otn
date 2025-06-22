@@ -24,7 +24,7 @@
 
 .card {
   background-color: var(--modal-color);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
   border-radius: 20px;
   width: 360px;
   height: 300px;
@@ -35,12 +35,12 @@
   padding: 20px;
   row-gap: 15px;
 
-  transition: .3s linear;
+  /* transition: .3s linear; */ /* Убираем transition чтобы не конфликтовал с Framer Motion */
 }
 
-.card:hover {
+/* .card:hover {
   transform: scale(1.03);
-}
+} */ /* Переместили в Framer Motion whileHover */
 
 .card svg {
   color: var(--first-color);

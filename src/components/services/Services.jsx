@@ -47,6 +47,15 @@ const Services = () => {
     show: { opacity: 1, y: 0 },
   };
 
+  const cardHover = {
+    scale: 1.03
+  };
+
+  const cardTransition = {
+    duration: 0.4,
+    ease: "easeInOut"
+  };
+
   return (
     <section className="services" id="services">
       <div className="container">
@@ -67,17 +76,17 @@ const Services = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <motion.div className="card">
+          <motion.div className="card" variants={cardVariants} whileHover={cardHover} transition={cardTransition}>
             <FaWifi />
             <h2 className="card__title">{t("services.servCardTitle1")}</h2>
             <p className="card_subtitle">{t("services.servCardSubtitle1")}</p>
           </motion.div>
-          <motion.div className="card" variants={cardVariants}>
+          <motion.div className="card" variants={cardVariants} whileHover={cardHover} transition={cardTransition}>
             <FaTv />
             <h2 className="card__title">{t("services.servCardTitle2")}</h2>
             <p className="card_subtitle">{t("services.servCardSubtitle2")}</p>
           </motion.div>
-          <motion.div className="card" variants={cardVariants}>
+          <motion.div className="card" variants={cardVariants} whileHover={cardHover} transition={cardTransition}>
             <FaPlane />
             <h2 className="card__title">{t("services.servCardTitle3")}</h2>
             <p className="card_subtitle">{t("services.servCardSubtitle3")}</p>
@@ -85,7 +94,7 @@ const Services = () => {
               {t("services.servCardButton")}
             </button>
           </motion.div>
-          <motion.div className="card" variants={cardVariants}>
+          <motion.div className="card" variants={cardVariants} whileHover={cardHover} transition={cardTransition}>
             <IoLocationOutline />
             <h2 className="card__title">{t("services.servCardTitle4")}</h2>
             <p className="card_subtitle">{t("services.servCardSubtitle4")}</p>
@@ -93,12 +102,12 @@ const Services = () => {
               {t("services.servCardButton")}
             </button>
           </motion.div>
-          <motion.div className="card" variants={cardVariants}>
+          <motion.div className="card" variants={cardVariants} whileHover={cardHover} transition={cardTransition}>
             <FaSquareParking />
             <h2 className="card__title">{t("services.servCardTitle5")}</h2>
             <p className="card_subtitle">{t("services.servCardSubtitle5")}</p>
           </motion.div>
-          <motion.div className="card" variants={cardVariants}>
+          <motion.div className="card" variants={cardVariants} whileHover={cardHover} transition={cardTransition}>
             <FaMountainSun />
             <h2 className="card__title">{t("services.servCardTitle6")}</h2>
             <p className="card_subtitle">{t("services.servCardSubtitle6")}</p>
