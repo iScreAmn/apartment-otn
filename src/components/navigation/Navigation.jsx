@@ -16,9 +16,9 @@ const Navigation = () => {
       <div className="container">
         <nav className="nav">
           <div className="nav__logo">
-            <a href="#!">
+            <Link to="/">
               <img className="logo-img" src={currentLogo} alt="Logo" />
-            </a>
+            </Link>
           </div>
           <div className="nav__list">
             <ul>

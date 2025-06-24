@@ -10,6 +10,7 @@ import { RemoveScroll } from "react-remove-scroll";
 import { motion } from "motion/react";
 import { slideInVariants } from "../../../utils/animation";
 import { useLanguage } from "../../context/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // Состояния для управления модальными окнами и формой
@@ -243,9 +244,9 @@ const Home = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <a href="#!" className="home__link">
+          <Link to="/about" className="home__link">
             {t("home.cover")} <span>{t("home.span")}</span>
-          </a>
+          </Link>
         </motion.div>
       </div>
 

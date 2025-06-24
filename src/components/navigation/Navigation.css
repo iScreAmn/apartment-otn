@@ -22,7 +22,7 @@
 .nav__list ul {
   display: flex;
   color: var(--third-color);
-  gap: 80px;
+  gap: 70px;
 }
 
 

@@ -69,9 +69,9 @@
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  /* box-shadow: 
+  box-shadow: 
     8px 8px 24px var(--shadow-dark),
-    -4px -4px 16px var(--shadow-light); */
+    -4px -4px 16px var(--shadow-light);
   transition: box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@
   background: var(--modal-background);
   border-radius: 20px;
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   max-height: 90vh;
   overflow: hidden;
   position: relative;
